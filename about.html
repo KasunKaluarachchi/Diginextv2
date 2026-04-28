@@ -81,7 +81,7 @@
       <h1 class="hero__title" data-t="about_hero_title">A proud Swedish company, <span>built on Nordic expertise.</span></h1>
       <p class="hero__desc" data-t="about_hero_desc">Diginext Scandinavia has grown to become a trusted partner for digital infrastructure across the Nordics and Central Europe — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo, Helsinki and Warsaw.</p>
       <div class="hero__badges">
-        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_founded">Founded 2006</span></span>
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_founded">Founded 2022</span></span>
         <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_staff">120+ Engineers</span></span>
         <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_countries">6 Countries</span></span>
       </div>
@@ -103,7 +103,7 @@
             <span style="width:32px; height:32px; border-radius:50%; background:var(--navy-900); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
             </span>
-            <span data-t="mission_p1">ISO 27001, ISO 9001 &amp; ISO 14001 certified</span>
+            <span data-t="mission_p1">ISO 14644-8 certified</span>
           </div>
           <div style="display:flex; align-items:center; gap:12px; font-size:14px; color:var(--ink);">
             <span style="width:32px; height:32px; border-radius:50%; background:var(--navy-900); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
@@ -141,7 +141,7 @@
       <div class="stat-cell__label" data-t="stat1">Projects Delivered</div>
     </div>
     <div class="stat-cell scroll-reveal" style="transition-delay:0.1s">
-      <div class="stat-cell__value">18<span>+</span></div>
+      <div class="stat-cell__value">3<span>+</span></div>
       <div class="stat-cell__label" data-t="stat_years">Years Experience</div>
     </div>
     <div class="stat-cell scroll-reveal" style="transition-delay:0.2s">
@@ -156,11 +156,13 @@
 </section>
 
 <!-- ========= VALUES ========= -->
-<section class="section section--alt" id="values">
-  <div class="section__inner">
+<section class="section" id="values" style="background:#fff; overflow:hidden; position:relative;">
+  <!-- subtle bg pattern -->
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(16,52,166,0.035) 1.5px,transparent 1.5px);background-size:30px 30px;pointer-events:none;z-index:0;"></div>
+  <div class="section__inner" style="position:relative;z-index:1;">
     <div class="section__head">
       <div class="section__head-left">
-        <span class="eyebrow" style="color:var(--navy-700);" data-t="values_eyebrow">Our Values</span>
+        <span class="eyebrow" style="color:var(--cyan);" data-t="values_eyebrow">Our Values</span>
         <h2 class="section__title" data-t="values_title">What we care about, how we work.</h2>
       </div>
       <div class="section__head-right">
@@ -168,151 +170,302 @@
       </div>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:14px; overflow:hidden;">
+    <!-- ── Premium values grid ── -->
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:8px;">
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="none"><circle cx="9" cy="7" r="4" fill="var(--cyan)" opacity="0.9"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="var(--cyan)" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87" stroke="rgba(16,52,166,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      <!-- 01 -->
+      <article class="scroll-reveal val-card" style="background:#fff; border:1.5px solid var(--rule); border-radius:16px; padding:32px 26px; display:flex; flex-direction:column; gap:16px; position:relative; overflow:hidden; transition:transform 0.25s, box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="4" fill="#fff" opacity="0.9"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87" stroke="rgba(255,255,255,0.55)" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">01</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val1_h">People Centred</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val1_p">We treat customers, partners and each other with respect — and we believe in investing in people to make great things happen.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">01</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val1_h">People Centred</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val1_p">We treat customers, partners and each other with respect — and we believe in investing in people to make great things happen.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" fill="var(--cyan)" opacity="0.85"/><path d="M2 13l10 5 10-5" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M2 18l10 5 10-5" stroke="rgba(16,52,166,0.4)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+      <!-- 02 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" fill="#fff" opacity="0.9"/><path d="M2 13l10 5 10-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M2 18l10 5 10-5" stroke="rgba(255,255,255,0.45)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">02</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val2_h">Knowledge Driven</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val2_p">We take pride in being experts in our field. Ongoing training and certification keeps our teams ahead of the curve.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">02</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val2_h">Knowledge Driven</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val2_p">We take pride in being experts in our field. Ongoing training and certification keeps our teams ahead of the curve.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><path d="M8 9.5C8.5 7.5 10 6.5 12 6.5c2.5 0 4 1.5 4 3.5 0 1.5-1 2.5-2.5 3L12 14" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="12" cy="17" r="0.8" fill="var(--cyan)"/></svg>
+      <!-- 03 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.8" fill="rgba(255,255,255,0.12)"/><path d="M8 9.5C8.5 7.5 10 6.5 12 6.5c2.5 0 4 1.5 4 3.5 0 1.5-1 2.5-2.5 3L12 14" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="12" cy="17" r="1" fill="#fff"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">03</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val3_h">Open Minded</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val3_p">We stay nimble in thought and action — so we can respond to every challenge with clear thinking and fresh perspective.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">03</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val3_h">Open Minded</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val3_p">We stay nimble in thought and action — so we can respond to every challenge with clear thinking and fresh perspective.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="7" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><path d="m20 20-3.5-3.5" stroke="var(--cyan)" stroke-width="2.2" stroke-linecap="round"/><circle cx="10" cy="10" r="2.5" fill="var(--cyan)" opacity="0.7"/></svg>
+      <!-- 04 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="7" stroke="#fff" stroke-width="1.8" fill="rgba(255,255,255,0.12)"/><path d="m20 20-3.5-3.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><circle cx="10" cy="10" r="2.5" fill="#fff" opacity="0.85"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">04</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val4_h">Curiosity Led</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val4_p">We're interested in the latest innovations and keep our finger on the pulse of every development that affects our clients.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">04</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val4_h">Curiosity Led</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val4_p">We're interested in the latest innovations and keep our finger on the pulse of every development that affects our clients.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="2 12 7 12 9.5 3 14.5 21 17 12 22 12" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <!-- 05 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="2 12 7 12 9.5 3 14.5 21 17 12 22 12" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">05</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val5_h">Results Focused</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val5_p">We set ourselves high standards because we care when our customers succeed — and we deliver against that commitment every time.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">05</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val5_h">Results Focused</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val5_p">We set ourselves high standards because we care when our customers succeed — and we deliver against that commitment every time.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(16,52,166,0.1)" stroke="var(--cyan)" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <!-- 06 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">06</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val6_h">Safety First</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val6_p">We protect our people, our clients, and every project with the highest safety standards — no exceptions, no shortcuts.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">06</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val6_h">Safety First</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val6_p">We protect our people, our clients, and every project with the highest safety standards — no exceptions, no shortcuts.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--cyan)" stroke-width="1.4"/><path d="M12 3a18 9 0 0 1 0 18M12 3a18 9 0 0 0 0 18" stroke="var(--cyan)" stroke-width="1.4" fill="none"/></svg>
+      <!-- 07 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.8" fill="rgba(255,255,255,0.12)"/><line x1="2" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="1.4"/><path d="M12 3a18 9 0 0 1 0 18M12 3a18 9 0 0 0 0 18" stroke="#fff" stroke-width="1.4" fill="none"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">07</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val7_h">Local Experts, Global Standards</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val7_p">Nordic-based crews delivering world-class results — with the cultural fluency and regulatory knowledge that global firms lack.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">07</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val7_h">Local Experts, Global Standards</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val7_p">Nordic-based crews delivering world-class results — with the cultural fluency and regulatory knowledge that global firms lack.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="rgba(16,52,166,0.15)" stroke="var(--cyan)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <!-- 08 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="rgba(255,255,255,0.15)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">08</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val8_h">Client Focused</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val8_p">Solutions tailored to your goals, not a one-size-fits-all approach. We listen first, then engineer the right answer.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">08</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val8_h">Client Focused</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val8_p">Solutions tailored to your goals, not a one-size-fits-all approach. We listen first, then engineer the right answer.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="12" y1="2" x2="12" y2="22" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+      <!-- 09 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="12" y1="2" x2="12" y2="22" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">09</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val9_h">Cost Efficient</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val9_p">Maximising value without compromising quality. Smart sourcing, lean delivery, and transparent pricing on every engagement.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">09</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val9_h">Cost Efficient</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val9_p">Maximising value without compromising quality. Smart sourcing, lean delivery, and transparent pricing on every engagement.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/></svg>
+      <!-- 10 -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.12)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),rgba(16,52,166,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--navy-900) 0%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.6"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">10</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val10_h">Flexible Resourcing</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val10_p">The right people, at the right time, for projects of any size — from a single-rack smart hands call to a 60-person hyperscale mobilisation.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">10</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val10_h">Flexible Resourcing</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val10_p">The right people, at the right time, for projects of any size — from a single-rack smart hands call to a 60-person hyperscale mobilisation.</p>
+        </div>
       </article>
 
-      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#145a32 0%,#1e8449 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(20,90,50,0.3);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5.5-3.5 7l-3.5 6-3.5-6A8.5 8.5 0 0 1 5 9a7 7 0 0 1 7-7z" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="#22c55e" opacity="0.9"/></svg>
+      <!-- 11 – green accent -->
+      <article class="scroll-reveal val-card" style="background:#fff;border:1.5px solid var(--rule);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(34,197,94,0.1)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#22c55e,rgba(34,197,94,0.3));border-radius:16px 16px 0 0;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#145a32 0%,#22c55e 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(34,197,94,0.3);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5.5-3.5 7l-3.5 6-3.5-6A8.5 8.5 0 0 1 5 9a7 7 0 0 1 7-7z" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="#fff"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:#22c55e; text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">11</div>
-        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val11_h">Sustainable Practices</h3>
-        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val11_p">Reducing environmental impact while maintaining performance — because the infrastructure of tomorrow demands responsibility today.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:#22c55e;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">11</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:var(--navy-900);margin:0 0 8px;letter-spacing:-0.01em;" data-t="val11_h">Sustainable Practices</h3>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.7;margin:0;" data-t="val11_p">Reducing environmental impact while maintaining performance — because the infrastructure of tomorrow demands responsibility today.</p>
+        </div>
       </article>
 
-      <article style="background:var(--navy-900); padding:32px 28px; display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden;" class="scroll-reveal">
-        <div style="position:absolute; top:-30px; right:-30px; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle, rgba(16,52,166,0.15) 0%, transparent 70%); pointer-events:none;"></div>
-        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-600) 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(16,52,166,0.4);">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(10,27,61,0.8)" stroke="var(--navy-900)" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <!-- 12 – dark accent -->
+      <article class="scroll-reveal val-card" style="background:var(--navy-900);border:1.5px solid var(--navy-900);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(16,52,166,0.4)'" onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+        <div style="position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(16,52,166,0.4) 0%,transparent 70%);pointer-events:none;"></div>
+        <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-600) 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(16,52,166,0.5);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(10,27,61,0.85)" stroke="rgba(10,27,61,0.9)" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
-        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">12</div>
-        <h3 style="font-size:15px; font-weight:700; color:#fff; margin:0;" data-t="val12_h">Always Advancing</h3>
-        <p style="font-size:13px; color:rgba(255,255,255,0.75); line-height:1.65; margin:0;" data-t="val12_p">Ongoing training keeps our teams ahead of the curve — from new cabling standards to AI infrastructure techniques, we never stand still.</p>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:8px;">12</div>
+          <h3 style="font-size:15.5px;font-weight:700;color:#fff;margin:0 0 8px;letter-spacing:-0.01em;" data-t="val12_h">Always Advancing</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,0.72);line-height:1.7;margin:0;" data-t="val12_p">Ongoing training keeps our teams ahead of the curve — from new cabling standards to AI infrastructure techniques, we never stand still.</p>
+        </div>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- ========= FEATURE PHOTO BLOCK ========= -->
-<section class="section" style="padding-bottom:0;">
-  <div class="section__inner">
-    <div class="feature-block">
-      <div class="feature-block__media">
-        <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&q=80&auto=format&fit=crop" alt="Engineers at work" />
+</section>
+
+<!-- ========= OUR REACH ========= -->
+<section id="reach" style="background:var(--navy-900); overflow:hidden; position:relative; padding:clamp(64px,9vw,120px) 0;">
+  <!-- ambient orbs -->
+  <div style="position:absolute;top:-160px;right:-120px;width:560px;height:560px;background:radial-gradient(circle,rgba(16,52,166,0.22) 0%,transparent 68%);pointer-events:none;z-index:0;"></div>
+  <div style="position:absolute;bottom:-100px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(16,52,166,0.12) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
+
+  <div class="section__inner" style="position:relative;z-index:1;">
+
+    <!-- header -->
+    <div class="section__head" style="margin-bottom:56px;">
+      <div class="section__head-left">
+        <span class="eyebrow" style="color:var(--cyan);" data-t="reach_eyebrow">Our Reach</span>
+        <h2 class="section__title" style="color:#fff;" data-t="reach_title">Active across 7 countries, with Nordics at our core.</h2>
       </div>
-      <div class="feature-block__body">
-        <span class="eyebrow" data-t="reach_eyebrow">Our Reach</span>
-        <h2 class="feature-block__title" data-t="reach_title">Active across 6 countries, with Nordics at our core.</h2>
-        <p data-t="reach_desc">Our crews are embedded on active projects in Sweden, Norway, Finland, Denmark, Poland and Estonia. We don't parachute in — we hire locally, train to our standards, and integrate with client teams on the ground.</p>
-        <ul style="margin:24px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px;">
-          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
-            <span style="font-size:20px;">🇸🇪</span> <span data-t="reach_se">Sweden — Vallentuna HQ + Stockholm site office</span>
-          </li>
-          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
-            <span style="font-size:20px;">🇳🇴</span> <span data-t="reach_no">Norway — Oslo office, active Kristiansand project</span>
-          </li>
-          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
-            <span style="font-size:20px;">🇫🇮</span> <span data-t="reach_fi">Finland — Helsinki partner office</span>
-          </li>
-          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
-            <span style="font-size:20px;">🇵🇱</span> <span data-t="reach_pl">Poland — Warsaw, multi-phase cloud region build</span>
-          </li>
-        </ul>
-        <a href="contact.html" class="btn btn--accent" style="margin-top:32px;" data-t="reach_cta">Work with us →</a>
+      <div class="section__head-right">
+        <p class="section__desc" style="color:rgba(255,255,255,0.7);" data-t="reach_desc">Our crews are embedded on active projects across Sweden and Denmark, with completed builds in Norway, Finland, Poland, England and Portugal. We don't parachute in — we hire locally, train to our standards, and integrate with client teams on the ground.</p>
+      </div>
+    </div>
+
+    <!-- main grid: image + location cards -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+
+      <!-- Left: photo + stats -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="border-radius:18px;overflow:hidden;position:relative;aspect-ratio:4/3;">
+          <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&q=80&auto=format&fit=crop" alt="Engineers at work" style="width:100%;height:100%;object-fit:cover;filter:saturate(0.8);" loading="lazy"/>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,23,29,0.75) 0%,transparent 50%);"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+            <div>
+              <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;">Founded</div>
+              <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:#fff;line-height:1;">2022</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);border-radius:20px;padding:7px 14px;">
+              <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;animation:reachPulse 2s infinite;display:inline-block;"></span>
+              <span style="font-family:var(--mono);font-size:10px;color:#4ade80;font-weight:700;letter-spacing:0.07em;">4 LIVE PROJECTS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- mini stats row -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px;text-align:center;">
+            <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:var(--cyan);line-height:1;">7</div>
+            <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-top:5px;">Countries</div>
+          </div>
+          <div style="background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.2);border-radius:12px;padding:18px;text-align:center;">
+            <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:#4ade80;line-height:1;">4</div>
+            <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-top:5px;">Live Projects</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px;text-align:center;">
+            <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:800;color:rgba(255,255,255,0.7);line-height:1;">11</div>
+            <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-top:5px;">Done Sites</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: location cards -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+
+        <!-- HQ + Active -->
+        <div style="background:rgba(255,215,0,0.06);border:1.5px solid rgba(255,215,0,0.2);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">⭐</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#FFD700;">Sweden</span>
+              <span style="font-family:var(--mono);font-size:9px;font-weight:700;color:#FFD700;background:rgba(255,215,0,0.12);padding:2px 8px;border-radius:4px;letter-spacing:0.06em;">HEADQUARTERS</span>
+            </div>
+            <p style="font-size:12.5px;color:rgba(255,255,255,0.72);line-height:1.6;margin:0;" data-t="reach_se">Stockholm HQ · Active projects in Stockholm, Gävle &amp; Sandviken</p>
+          </div>
+        </div>
+
+        <!-- Active: Denmark -->
+        <div style="background:rgba(34,197,94,0.06);border:1.5px solid rgba(34,197,94,0.2);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🇩🇰</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Denmark</span>
+              <span style="display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,0.1);padding:2px 8px;border-radius:4px;letter-spacing:0.06em;"><span style="width:5px;height:5px;border-radius:50%;background:#4ade80;animation:reachPulse 2s infinite;"></span>ACTIVE</span>
+            </div>
+            <p style="font-size:12.5px;color:rgba(255,255,255,0.72);line-height:1.6;margin:0;" data-t="reach_dk">Copenhagen — Active infrastructure project, ongoing</p>
+          </div>
+        </div>
+
+        <!-- Office: Norway -->
+        <div style="background:rgba(16,52,166,0.08);border:1.5px solid rgba(16,52,166,0.28);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(16,52,166,0.18);border:1px solid rgba(16,52,166,0.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🇳🇴</div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Norway</span>
+              <span style="font-family:var(--mono);font-size:9px;font-weight:700;color:var(--cyan);background:rgba(16,52,166,0.15);padding:2px 8px;border-radius:4px;letter-spacing:0.06em;">OFFICE</span>
+            </div>
+            <p style="font-size:12.5px;color:rgba(255,255,255,0.72);line-height:1.6;margin:0;" data-t="reach_no">Oslo branch office · Completed projects in Oslo, Hamar &amp; Kristiansand</p>
+          </div>
+        </div>
+
+        <!-- Completed: divider -->
+        <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.12em;padding:4px 4px 0;">Completed Projects</div>
+
+        <!-- Completed countries: 2-col -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;" class="reach-done">
+            <span style="font-size:18px;">🇫🇮</span>
+            <div><div style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.8);" data-t="reach_fi_name">Finland</div><div style="font-size:10.5px;color:rgba(255,255,255,0.42);">Helsinki</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;" class="reach-done">
+            <span style="font-size:18px;">🇵🇱</span>
+            <div><div style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.8);" data-t="reach_pl_name">Poland</div><div style="font-size:10.5px;color:rgba(255,255,255,0.42);">Warsaw</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;" class="reach-done">
+            <span style="font-size:18px;">🇬🇧</span>
+            <div><div style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.8);" data-t="reach_uk_name">England</div><div style="font-size:10.5px;color:rgba(255,255,255,0.42);">London</div></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;" class="reach-done">
+            <span style="font-size:18px;">🇵🇹</span>
+            <div><div style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,0.8);" data-t="reach_pt_name">Portugal</div><div style="font-size:10.5px;color:rgba(255,255,255,0.42);">Lisbon</div></div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn--accent" style="margin-top:6px;width:100%;justify-content:center;text-align:center;" data-t="reach_cta">Work with us →</a>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+@keyframes reachPulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+@media(max-width:860px){
+  #reach .section__inner > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}
+}
+</style>
+
 
 <!-- ========= CTA BAND ========= -->
 <section class="cta-band">
@@ -351,9 +504,9 @@
           <a href="https://wa.me/46735767520" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4.14 1 1 4.14 1 8c0 1.24.33 2.42.9 3.44L1 15l3.64-.88C5.62 14.68 6.79 15 8 15c3.86 0 7-3.14 7-7s-3.14-7-7-7zm3.64 9.86c-.16.44-.92.84-1.28.88-.32.04-.73.06-1.18-.08-.27-.08-.62-.2-1.06-.4-1.86-.8-3.08-2.68-3.18-2.8-.1-.12-.8-1.06-.8-2.02 0-.96.5-1.44.68-1.64.18-.2.4-.24.52-.24.14 0 .26.002.38.008.12.006.3-.044.46.36.16.4.56 1.36.6 1.46.04.1.07.22.014.34-.056.12-.084.2-.164.3-.08.1-.17.22-.24.3-.08.08-.16.17-.07.33.1.16.44.72.94 1.16.64.58 1.18.76 1.34.84.16.08.26.07.36-.04.1-.1.42-.48.54-.64.12-.16.22-.14.38-.08.16.06 1 .472 1.17.558.17.086.28.128.32.2.04.074-.002.44-.16.88z"/></svg></a>
         </div>
         <div class="foot__certifications" style="margin-top:20px;">
-          <span class="foot__cert-badge">ISO 27001</span>
-          <span class="foot__cert-badge">ISO 9001</span>
-          <span class="foot__cert-badge">ISO 14001</span>
+          <span class="foot__cert-badge">ISO 14644-8</span>
+          
+          
           <span class="foot__cert-badge">Cisco Premier</span>
         </div>
       </div>
@@ -408,10 +561,10 @@ const TRANSLATIONS = {
     about_eyebrow:"About Diginext Scandinavia",
     about_hero_title:"A proud Swedish company, <span>built on Nordic expertise.</span>",
     about_hero_desc:"Diginext Scandinavia has grown to become a trusted partner for digital infrastructure across the Nordics and Central Europe — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo, Helsinki and Warsaw.",
-    badge_founded:"Founded 2006", badge_staff:"120+ Engineers", badge_countries:"6 Countries",
+    badge_founded:"Founded 2022", badge_staff:"120+ Engineers", badge_countries:"7 Countries",
     mission_eyebrow:"Our Mission", mission_title:"Unparalleled quality and reliability, in every project.",
     mission_body:"To deliver unparalleled quality and reliability in every digital infrastructure project — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo and Helsinki.",
-    mission_p1:"ISO 27001, ISO 9001 & ISO 14001 certified", mission_p2:"24/7 Network Operations Centre", mission_p3:"99.98% uptime SLA across all managed services",
+    mission_p1:"ISO 14644-8 certified", mission_p2:"24/7 Network Operations Centre", mission_p3:"99.98% uptime SLA across all managed services",
     vision_eyebrow:"Our Vision", vision_title:"Shaping the future of Europe's digital infrastructure.",
     vision_body:"To be the leading force in shaping Europe's digital future — a seamlessly connected continent powered by state-of-the-art infrastructure.",
     stat1:"Projects Delivered", stat_years:"Years Experience", stat_engineers:"Engineers & Technicians", stat4:"Countries Active",
