@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>About — Diginext Scandinavia</title>
+<meta name="description" content="A Swedish engineering partner building, maintaining and optimising digital infrastructure across the Nordics and Europe. Founded on expertise, built on trust." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diginext Scandinavia" />
+<meta property="og:title" content="About — Diginext Scandinavia" />
+<meta property="og:url" content="https://ginigeashan-alt.github.io/diginext/about.html" />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<meta name="theme-color" content="#0E171D">
+</head>
+<body>
+
+<!-- ========= TOPBAR ========= -->
+<div class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item"><span class="status-dot"></span> <span data-t="systems_nominal">All systems nominal</span></span>
+      <span class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 2v4l3 2"/></svg>
+        <span data-t="response_time">Avg response &lt;2h</span>
+      </span>
+      <a href="tel:+46735767520" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 10.5c-.8-.8-1.9-.8-2.7 0l-.9.9c-1.5-.8-2.8-2.1-3.6-3.6l.9-.9c.8-.8.8-1.9 0-2.7L6.1 3.1C5.3 2.3 4.2 2.3 3.4 3L2.7 3.7C1.4 5 1.8 7.3 3.5 9.7c1.4 2 3.3 3.8 5.3 5 1 .5 2.1.8 3 .8.8 0 1.5-.2 2-.7l.7-.7c.8-.8.8-1.9 0-2.7l-1-1z"/></svg>
+        +46 73 576 75 20
+      </a>
+    </div>
+    <div class="topbar__right">
+      <a href="mailto:info@diginext.se" class="topbar__item">info@diginext.se</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-switch__btn is-active" data-lang="en">EN</button>
+        <button class="lang-switch__btn" data-lang="sv">SV</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========= NAV ========= -->
+<nav class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+              <img src="logo.svg" alt="Diginext Scandinavia" class="logo-img" />
+
+      
+    </a>
+    <ul class="nav__links" id="primaryNav">
+      <li><a href="index.html" data-t="nav_home">Home</a></li>
+      <li><a href="services.html" data-t="nav_services">Services</a></li>
+      <li><a href="industries.html" data-t="nav_industries">Industries</a></li>
+      <li><a href="about.html" class="is-active" data-t="nav_about">About</a></li>
+      <li><a href="careers.html" data-t="nav_careers">Careers</a></li>
+      <li><a href="contact.html" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav__cta-group">
+      <a href="contact.html" class="btn btn--ghost btn--sm" data-t="nav_enquire">Enquire</a>
+      <a href="contact.html" class="btn btn--accent btn--sm" data-t="nav_start_project">Start a Project</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========= HERO ========= -->
+<section class="hero" style="min-height:520px;">
+  <div class="hero__visual">
+    <img class="hero__visual-slide is-active" src="Diginext_pant.jpeg" alt="" />
+    <div class="hero__visual-fade"></div>
+  </div>
+  <div class="hero__grid-overlay"></div>
+  <div class="hero__inner">
+    <div class="hero__content">
+      <span class="eyebrow" data-t="about_eyebrow">About Diginext Scandinavia</span>
+      <h1 class="hero__title" data-t="about_hero_title">A proud Swedish company, <span>built on Nordic expertise.</span></h1>
+      <p class="hero__desc" data-t="about_hero_desc">Diginext Scandinavia has grown to become a trusted partner for digital infrastructure across the Nordics and Central Europe — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo, Helsinki and Warsaw.</p>
+      <div class="hero__badges">
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_founded">Founded 2006</span></span>
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_staff">120+ Engineers</span></span>
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="badge_countries">6 Countries</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= MISSION + VISION ========= -->
+<section class="section">
+  <div class="section__inner">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
+
+      <article>
+        <span class="eyebrow" style="color:var(--navy-700);" data-t="mission_eyebrow">Our Mission</span>
+        <h2 style="font-family:var(--display); font-size:clamp(26px,2.6vw,34px); font-weight:700; color:var(--navy-900); letter-spacing:-0.02em; line-height:1.15; margin:12px 0 20px;" data-t="mission_title">Unparalleled quality and reliability, in every project.</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin:0;" data-t="mission_body">To deliver unparalleled quality and reliability in every digital infrastructure project — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo and Helsinki. We empower our clients' success by building robust, efficient, and scalable foundations for their digital operations.</p>
+        <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; align-items:center; gap:12px; font-size:14px; color:var(--ink);">
+            <span style="width:32px; height:32px; border-radius:50%; background:var(--navy-900); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+            </span>
+            <span data-t="mission_p1">ISO 27001, ISO 9001 &amp; ISO 14001 certified</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:14px; color:var(--ink);">
+            <span style="width:32px; height:32px; border-radius:50%; background:var(--navy-900); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+            </span>
+            <span data-t="mission_p2">24/7 Network Operations Centre</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:14px; color:var(--ink);">
+            <span style="width:32px; height:32px; border-radius:50%; background:var(--navy-900); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>
+            </span>
+            <span data-t="mission_p3">99.98% uptime SLA across all managed services</span>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div style="border-radius:12px; overflow:hidden; height:320px; margin-bottom:28px;">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=80&auto=format&fit=crop" alt="Diginext team at work" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+        <span class="eyebrow" style="color:var(--navy-700);" data-t="vision_eyebrow">Our Vision</span>
+        <h2 style="font-family:var(--display); font-size:clamp(26px,2.6vw,34px); font-weight:700; color:var(--navy-900); letter-spacing:-0.02em; line-height:1.15; margin:12px 0 16px;" data-t="vision_title">Shaping the future of Europe's digital infrastructure.</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.75; margin:0;" data-t="vision_body">To be the leading force in shaping Europe's digital future — a seamlessly connected continent powered by state-of-the-art infrastructure. We strive to be at the forefront of this transformation, driving innovation, sustainability, and connectivity across borders.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= STATS BAND ========= -->
+<section class="stats-band section--dark">
+  <div class="stats-band__inner">
+    <div class="stat-cell scroll-reveal">
+      <div class="stat-cell__value">105<span>+</span></div>
+      <div class="stat-cell__label" data-t="stat1">Projects Delivered</div>
+    </div>
+    <div class="stat-cell scroll-reveal" style="transition-delay:0.1s">
+      <div class="stat-cell__value">18<span>+</span></div>
+      <div class="stat-cell__label" data-t="stat_years">Years Experience</div>
+    </div>
+    <div class="stat-cell scroll-reveal" style="transition-delay:0.2s">
+      <div class="stat-cell__value">120<span>+</span></div>
+      <div class="stat-cell__label" data-t="stat_engineers">Engineers &amp; Technicians</div>
+    </div>
+    <div class="stat-cell scroll-reveal" style="transition-delay:0.3s">
+      <div class="stat-cell__value">6</div>
+      <div class="stat-cell__label" data-t="stat4">Countries Active</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= VALUES ========= -->
+<section class="section section--alt" id="values">
+  <div class="section__inner">
+    <div class="section__head">
+      <div class="section__head-left">
+        <span class="eyebrow" style="color:var(--navy-700);" data-t="values_eyebrow">Our Values</span>
+        <h2 class="section__title" data-t="values_title">What we care about, how we work.</h2>
+      </div>
+      <div class="section__head-right">
+        <p class="section__desc" data-t="values_desc">Our values define how we operate for our clients, our partners and the communities we serve. They are not aspirational — they are operational.</p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:14px; overflow:hidden;">
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="none"><circle cx="9" cy="7" r="4" fill="var(--cyan)" opacity="0.9"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="var(--cyan)" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87" stroke="rgba(16,52,166,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">01</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val1_h">People Centred</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val1_p">We treat customers, partners and each other with respect — and we believe in investing in people to make great things happen.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3L2 8l10 5 10-5-10-5z" fill="var(--cyan)" opacity="0.85"/><path d="M2 13l10 5 10-5" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M2 18l10 5 10-5" stroke="rgba(16,52,166,0.4)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">02</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val2_h">Knowledge Driven</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val2_p">We take pride in being experts in our field. Ongoing training and certification keeps our teams ahead of the curve.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><path d="M8 9.5C8.5 7.5 10 6.5 12 6.5c2.5 0 4 1.5 4 3.5 0 1.5-1 2.5-2.5 3L12 14" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="12" cy="17" r="0.8" fill="var(--cyan)"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">03</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val3_h">Open Minded</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val3_p">We stay nimble in thought and action — so we can respond to every challenge with clear thinking and fresh perspective.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="7" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><path d="m20 20-3.5-3.5" stroke="var(--cyan)" stroke-width="2.2" stroke-linecap="round"/><circle cx="10" cy="10" r="2.5" fill="var(--cyan)" opacity="0.7"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">04</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val4_h">Curiosity Led</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val4_p">We're interested in the latest innovations and keep our finger on the pulse of every development that affects our clients.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="2 12 7 12 9.5 3 14.5 21 17 12 22 12" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">05</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val5_h">Results Focused</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val5_p">We set ourselves high standards because we care when our customers succeed — and we deliver against that commitment every time.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(16,52,166,0.1)" stroke="var(--cyan)" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">06</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val6_h">Safety First</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val6_p">We protect our people, our clients, and every project with the highest safety standards — no exceptions, no shortcuts.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--cyan)" stroke-width="1.8" fill="rgba(16,52,166,0.08)"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--cyan)" stroke-width="1.4"/><path d="M12 3a18 9 0 0 1 0 18M12 3a18 9 0 0 0 0 18" stroke="var(--cyan)" stroke-width="1.4" fill="none"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">07</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val7_h">Local Experts, Global Standards</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val7_p">Nordic-based crews delivering world-class results — with the cultural fluency and regulatory knowledge that global firms lack.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="rgba(16,52,166,0.15)" stroke="var(--cyan)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">08</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val8_h">Client Focused</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val8_p">Solutions tailored to your goals, not a one-size-fits-all approach. We listen first, then engineer the right answer.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="12" y1="2" x2="12" y2="22" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="var(--cyan)" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">09</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val9_h">Cost Efficient</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val9_p">Maximising value without compromising quality. Smart sourcing, lean delivery, and transparent pricing on every engagement.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#0A1B3D 0%,#1a3a7a 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(10,27,61,0.25);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.5" fill="rgba(16,52,166,0.2)" stroke="var(--cyan)" stroke-width="1.6"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">10</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val10_h">Flexible Resourcing</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val10_p">The right people, at the right time, for projects of any size — from a single-rack smart hands call to a 60-person hyperscale mobilisation.</p>
+      </article>
+
+      <article style="background:#fff; padding:32px 28px; display:flex; flex-direction:column; gap:14px; transition:background 0.2s;" class="scroll-reveal" onmouseenter="this.style.background='#f8faff'" onmouseleave="this.style.background='#fff'">
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,#145a32 0%,#1e8449 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(20,90,50,0.3);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5.5-3.5 7l-3.5 6-3.5-6A8.5 8.5 0 0 1 5 9a7 7 0 0 1 7-7z" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="#22c55e" opacity="0.9"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:#22c55e; text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">11</div>
+        <h3 style="font-size:15px; font-weight:700; color:var(--navy-900); margin:0;" data-t="val11_h">Sustainable Practices</h3>
+        <p style="font-size:13px; color:var(--ink-2); line-height:1.65; margin:0;" data-t="val11_p">Reducing environmental impact while maintaining performance — because the infrastructure of tomorrow demands responsibility today.</p>
+      </article>
+
+      <article style="background:var(--navy-900); padding:32px 28px; display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden;" class="scroll-reveal">
+        <div style="position:absolute; top:-30px; right:-30px; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle, rgba(16,52,166,0.15) 0%, transparent 70%); pointer-events:none;"></div>
+        <div style="width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-600) 100%); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(16,52,166,0.4);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="rgba(10,27,61,0.8)" stroke="var(--navy-900)" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--cyan); text-transform:uppercase; letter-spacing:0.12em; font-weight:600;">12</div>
+        <h3 style="font-size:15px; font-weight:700; color:#fff; margin:0;" data-t="val12_h">Always Advancing</h3>
+        <p style="font-size:13px; color:rgba(255,255,255,0.75); line-height:1.65; margin:0;" data-t="val12_p">Ongoing training keeps our teams ahead of the curve — from new cabling standards to AI infrastructure techniques, we never stand still.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= FEATURE PHOTO BLOCK ========= -->
+<section class="section" style="padding-bottom:0;">
+  <div class="section__inner">
+    <div class="feature-block">
+      <div class="feature-block__media">
+        <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=1200&q=80&auto=format&fit=crop" alt="Engineers at work" />
+      </div>
+      <div class="feature-block__body">
+        <span class="eyebrow" data-t="reach_eyebrow">Our Reach</span>
+        <h2 class="feature-block__title" data-t="reach_title">Active across 6 countries, with Nordics at our core.</h2>
+        <p data-t="reach_desc">Our crews are embedded on active projects in Sweden, Norway, Finland, Denmark, Poland and Estonia. We don't parachute in — we hire locally, train to our standards, and integrate with client teams on the ground.</p>
+        <ul style="margin:24px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px;">
+          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
+            <span style="font-size:20px;">🇸🇪</span> <span data-t="reach_se">Sweden — Vallentuna HQ + Stockholm site office</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
+            <span style="font-size:20px;">🇳🇴</span> <span data-t="reach_no">Norway — Oslo office, active Kristiansand project</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
+            <span style="font-size:20px;">🇫🇮</span> <span data-t="reach_fi">Finland — Helsinki partner office</span>
+          </li>
+          <li style="display:flex; align-items:center; gap:12px; font-size:14px; font-weight:500; color:var(--ink);">
+            <span style="font-size:20px;">🇵🇱</span> <span data-t="reach_pl">Poland — Warsaw, multi-phase cloud region build</span>
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn--accent" style="margin-top:32px;" data-t="reach_cta">Work with us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= CTA BAND ========= -->
+<section class="cta-band">
+  <div class="cta-band__bg">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=2000&q=80&auto=format&fit=crop" alt="" loading="lazy" />
+  </div>
+  <div class="cta-band__inner">
+    <div>
+      <span class="eyebrow" style="color:var(--cyan);" data-t="cta_eyebrow">Ready When You Are</span>
+      <h2 class="cta-band__title" data-t="cta_title">Want to work with us? <span>Let's talk.</span></h2>
+      <p class="cta-band__desc" data-t="cta_desc">Tell us about the build — we'll give you a straight answer on scope, timeline and cost within one business day.</p>
+    </div>
+    <div class="cta-band__actions">
+      <a href="contact.html" class="btn btn--accent btn--lg" data-t="cta_btn1">
+        Start a Conversation
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="careers.html" class="btn btn--ghost-light btn--lg" data-t="cta_btn2">Join the Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__top">
+      <div class="foot__brand-block">
+        <a href="index.html" class="foot__brand">
+          <img src="Diginext_logo_footer.png" alt="Diginext Scandinavia" class="logo-img" />
+        </a>
+        <p class="foot__about" data-t="footer_about">A Swedish engineering partner for digital infrastructure across the Nordics and Central Europe. ISO-certified, 24/7 support, four-nines uptime.</p>
+         <div class="foot__social">
+          <a href="https://se.linkedin.com/company/diginext_scandinavia" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 5C4.3 5 5 4.3 5 3.5S4.3 2 3.5 2 2 2.7 2 3.5 2.7 5 3.5 5zM2.2 6.5h2.6V14H2.2V6.5zM6.8 6.5h2.5v1h0c.3-.6 1.2-1.2 2.4-1.2 2.6 0 3.1 1.7 3.1 3.9V14h-2.6V10.5c0-.8 0-1.9-1.2-1.9s-1.3 1-1.3 1.9V14H6.8V6.5z"/></svg></a>
+          <a href="https://www.instagram.com/diginextscandinavia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="2.5"/><circle cx="11.5" cy="4.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/diginextscandinavia/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9 14V8.5h2l.3-2.3H9V4.9c0-.7.2-1.1 1.1-1.1h1.2V1.7C11 1.7 10.3 1.6 9.5 1.6c-1.7 0-2.9 1-2.9 3v1.7H4.5v2.3h2.1V14H9z"/></svg></a>
+          <a href="https://wa.me/46735767520" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4.14 1 1 4.14 1 8c0 1.24.33 2.42.9 3.44L1 15l3.64-.88C5.62 14.68 6.79 15 8 15c3.86 0 7-3.14 7-7s-3.14-7-7-7zm3.64 9.86c-.16.44-.92.84-1.28.88-.32.04-.73.06-1.18-.08-.27-.08-.62-.2-1.06-.4-1.86-.8-3.08-2.68-3.18-2.8-.1-.12-.8-1.06-.8-2.02 0-.96.5-1.44.68-1.64.18-.2.4-.24.52-.24.14 0 .26.002.38.008.12.006.3-.044.46.36.16.4.56 1.36.6 1.46.04.1.07.22.014.34-.056.12-.084.2-.164.3-.08.1-.17.22-.24.3-.08.08-.16.17-.07.33.1.16.44.72.94 1.16.64.58 1.18.76 1.34.84.16.08.26.07.36-.04.1-.1.42-.48.54-.64.12-.16.22-.14.38-.08.16.06 1 .472 1.17.558.17.086.28.128.32.2.04.074-.002.44-.16.88z"/></svg></a>
+        </div>
+        <div class="foot__certifications" style="margin-top:20px;">
+          <span class="foot__cert-badge">ISO 27001</span>
+          <span class="foot__cert-badge">ISO 9001</span>
+          <span class="foot__cert-badge">ISO 14001</span>
+          <span class="foot__cert-badge">Cisco Premier</span>
+        </div>
+      </div>
+
+      <div class="foot__col">
+        <h4 data-t="footer_services">Services</h4>
+        <a href="services.html" data-t="footer_cabling">Structured Cabling</a>
+        <a href="services.html" data-t="footer_fibre">Fibre Optic</a>
+        <a href="services.html" data-t="footer_dc">Data Center Installation</a>
+        <a href="services.html" data-t="footer_network">Network Infrastructure</a>
+        <a href="services.html" data-t="footer_noc">24/7 NOC Support</a>
+      </div>
+
+      <div class="foot__col">
+        <h4 data-t="footer_company">Company</h4>
+        <a href="about.html" data-t="footer_about_link">About Us</a>
+        <a href="industries.html" data-t="footer_industries">Industries</a>
+        <a href="index.html#accreditations" data-t="footer_accred">Accreditations</a>
+        <a href="index.html#esg" data-t="footer_esg">ESG &amp; Sustainability</a>
+        <a href="careers.html" data-t="footer_careers">Careers</a>
+      </div>
+
+      <div class="foot__col">
+        <h4 data-t="footer_contact">Contact</h4>
+        <a href="mailto:info@diginext.se">info@diginext.se</a>
+        <a href="tel:+46735767520">+46 73 576 75 20</a>
+        <a href="#">Musseronvägen 20<br/>186 56 Vallentuna, Sweden</a>
+      </div>
+    </div>
+
+    <div class="foot__bottom">
+      <span>© 2026 Diginext Solutions AB. <span data-t="footer_rights">All rights reserved.</span></span>
+      <div class="foot__bottom-links">
+        <a href="privacy.html" data-t="footer_privacy">Privacy Policy</a>
+        <a href="terms.html" data-t="footer_terms">Terms</a>
+        <a href="gdpr.html" data-t="footer_gdpr">GDPR</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+const TRANSLATIONS = {
+  en: {
+    systems_nominal:"All systems nominal", response_time:"Avg response <2h",
+    nav_home:"Home", nav_services:"Services", nav_industries:"Industries",
+    nav_about:"About", nav_careers:"Careers", nav_contact:"Contact",
+    nav_enquire:"Enquire", nav_start_project:"Start a Project",
+    about_eyebrow:"About Diginext Scandinavia",
+    about_hero_title:"A proud Swedish company, <span>built on Nordic expertise.</span>",
+    about_hero_desc:"Diginext Scandinavia has grown to become a trusted partner for digital infrastructure across the Nordics and Central Europe — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo, Helsinki and Warsaw.",
+    badge_founded:"Founded 2006", badge_staff:"120+ Engineers", badge_countries:"6 Countries",
+    mission_eyebrow:"Our Mission", mission_title:"Unparalleled quality and reliability, in every project.",
+    mission_body:"To deliver unparalleled quality and reliability in every digital infrastructure project — from single-rack deployments in Stockholm to full data hall fit-outs in Oslo and Helsinki.",
+    mission_p1:"ISO 27001, ISO 9001 & ISO 14001 certified", mission_p2:"24/7 Network Operations Centre", mission_p3:"99.98% uptime SLA across all managed services",
+    vision_eyebrow:"Our Vision", vision_title:"Shaping the future of Europe's digital infrastructure.",
+    vision_body:"To be the leading force in shaping Europe's digital future — a seamlessly connected continent powered by state-of-the-art infrastructure.",
+    stat1:"Projects Delivered", stat_years:"Years Experience", stat_engineers:"Engineers & Technicians", stat4:"Countries Active",
+    values_eyebrow:"Our Values", values_title:"What we care about, how we work.",
+    values_desc:"Our values define how we operate for our clients, our partners and the communities we serve.",
+    val1_h:"People Centred", val1_p:"We treat customers, partners and each other with respect.",
+    val2_h:"Knowledge Driven", val2_p:"We take pride in being experts in our field.",
+    val3_h:"Open Minded", val3_p:"We stay nimble in thought and action.",
+    val4_h:"Curiosity Led", val4_p:"We're interested in the latest innovations.",
+    val5_h:"Results Focused", val5_p:"We hold ourselves to high standards.",
+    val6_h:"Safety First", val6_p:"We protect our people and every project.",
+    val7_h:"Local Experts, Global Standards", val7_p:"Nordic-based crews delivering world-class results.",
+    val8_h:"Sustainable Practices", val8_p:"Reducing environmental impact while maintaining performance.",
+    timeline_eyebrow:"Our History", timeline_title:"18 years of building Nordic infrastructure.",
+    timeline_desc:"From a two-person startup in Vallentuna to a 120-strong engineering firm across six countries.",
+    tl1_h:"Founded in Vallentuna", tl1_p:"Diginext Solutions AB incorporated in Vallentuna, Sweden. First contract: structured cabling for a Stockholm financial services firm.",
+    tl2_h:"Nordic Expansion", tl2_p:"Opened Oslo office and secured first hyperscale data center contract in Norway.",
+    tl3_h:"ISO 27001 & 9001 Certified", tl3_p:"Achieved dual ISO certification, cementing our position as a premium-tier infrastructure partner.",
+    tl4_h:"24/7 NOC Launched", tl4_p:"Launched our Network Operations Centre with round-the-clock monitoring and four-nines uptime SLA.",
+    tl5_h:"Central European Push", tl5_p:"Secured multi-phase hyperscale contracts in Poland and Estonia. ISO 14001 environmental certification achieved.",
+    tl6_h:"AI Infrastructure Specialisation", tl6_p:"Launched dedicated AI/ML infrastructure practice — high-density GPU cluster cabling and liquid cooling integration.",
+    team_eyebrow:"Leadership Team", team_title:"The people behind the projects.",
+    team_desc:"Our leadership combines deep engineering expertise with commercial acumen.",
+    team1_role:"Chief Executive Officer", team1_bio:"20+ years in Nordic infrastructure. Previously VP Engineering at Ericsson.",
+    team2_role:"Chief Operating Officer", team2_bio:"Logistics and operations specialist who scaled Diginext from 12 to 120 engineers.",
+    team3_role:"Chief Technology Officer", team3_bio:"Former data center architect at Equinix. Leads technical standards and vendor partnerships.",
+    reach_eyebrow:"Our Reach", reach_title:"Active across 6 countries, with Nordics at our core.",
+    reach_desc:"Our crews are embedded on active projects in Sweden, Norway, Finland, Denmark, Poland and Estonia.",
+    reach_se:"Sweden — Vallentuna HQ + Stockholm site office",
+    reach_no:"Norway — Oslo office, active Kristiansand project",
+    reach_fi:"Finland — Helsinki partner office",
+    reach_pl:"Poland — Warsaw, multi-phase cloud region build",
+    reach_cta:"Work with us →",
+    cta_eyebrow:"Ready When You Are", cta_title:"Want to work with us? <span>Let's talk.</span>",
+    cta_desc:"Tell us about the build — we'll give you a straight answer on scope, timeline and cost within one business day.",
+    cta_btn1:"Start a Conversation", cta_btn2:"Join the Team",
+    footer_about:"A Swedish engineering partner for digital infrastructure across the Nordics and Central Europe.",
+    footer_services:"Services", footer_cabling:"Structured Cabling", footer_fibre:"Fibre Optic",
+    footer_dc:"Data Center Installation", footer_network:"Network Infrastructure", footer_noc:"24/7 NOC Support",
+    footer_company:"Company", footer_about_link:"About Us", footer_industries:"Industries",
+    footer_accred:"Accreditations", footer_esg:"ESG & Sustainability", footer_careers:"Careers",
+    footer_contact:"Contact", footer_rights:"All rights reserved.",
+    footer_privacy:"Privacy Policy", footer_terms:"Terms", footer_gdpr:"GDPR", footer_imprint:"Imprint"
+  },
+  sv: {
+    systems_nominal:"Alla system nominella", response_time:"Avg svarstid <2h",
+    nav_home:"Hem", nav_services:"Tjänster", nav_industries:"Branscher",
+    nav_about:"Om oss", nav_careers:"Karriär", nav_contact:"Kontakt",
+    nav_enquire:"Förfrågan", nav_start_project:"Starta projekt",
+    about_eyebrow:"Om Diginext Scandinavia",
+    about_hero_title:"Ett stolt svenskt företag, <span>byggt på nordisk expertis.</span>",
+    about_hero_desc:"Diginext Scandinavia har vuxit till att bli en betrodd partner för digital infrastruktur i Norden och Centraleuropa.",
+    badge_founded:"Grundat 2006", badge_staff:"120+ ingenjörer", badge_countries:"6 länder",
+    mission_eyebrow:"Vårt uppdrag", mission_title:"Enastående kvalitet och tillförlitlighet i varje projekt.",
+    mission_body:"Att leverera enastående kvalitet och tillförlitlighet i varje projekt för digital infrastruktur — från enstaka rack till fullskaliga datacenter.",
+    mission_p1:"ISO 27001, ISO 9001 & ISO 14001 certifierat", mission_p2:"24/7 Network Operations Centre", mission_p3:"99,98% drifttid SLA på alla hanterade tjänster",
+    vision_eyebrow:"Vår vision", vision_title:"Formar framtiden för Europas digitala infrastruktur.",
+    vision_body:"Att vara den ledande kraften i att forma Europas digitala framtid — en sömlöst uppkopplad kontinent.",
+    stat1:"Levererade projekt", stat_years:"Års erfarenhet", stat_engineers:"Ingenjörer & tekniker", stat4:"Aktiva länder",
+    values_eyebrow:"Våra värderingar", values_title:"Vad vi bryr oss om, hur vi arbetar.",
+    values_desc:"Våra värderingar definierar hur vi agerar gentemot kunder, partners och samhällen.",
+    val1_h:"Människocentrerat", val1_p:"Vi behandlar kunder, partners och varandra med respekt.",
+    val2_h:"Kunskapsdrivet", val2_p:"Vi är stolta över att vara experter inom vårt område.",
+    val3_h:"Öppet sinne", val3_p:"Vi förblir flexibla i tanke och handling.",
+    val4_h:"Nyfikenhetsstyrt", val4_p:"Vi är intresserade av de senaste innovationerna.",
+    val5_h:"Resultatfokuserat", val5_p:"Vi håller oss till höga standarder.",
+    val6_h:"Säkerhet först", val6_p:"Vi skyddar våra medarbetare och varje projekt.",
+    val7_h:"Lokala experter, globala standarder", val7_p:"Nordiska team som levererar världsklassresultat.",
+    val8_h:"Hållbara metoder", val8_p:"Minskar miljöpåverkan med bibehållen prestanda.",
+    timeline_eyebrow:"Vår historia", timeline_title:"18 år av nordisk infrastruktur.",
+    timeline_desc:"Från ett tvåpersonsföretag i Vallentuna till 120+ ingenjörer i sex länder.",
+    tl1_h:"Grundat i Vallentuna", tl1_p:"Diginext Solutions AB grundat. Första kontrakt: strukturerad kablage i Stockholm.",
+    tl2_h:"Nordisk expansion", tl2_p:"Öppnade Oslokontor och säkrade första hyperscale-kontraktet i Norge.",
+    tl3_h:"ISO 27001 & 9001 certifierat", tl3_p:"Uppnådde dubbel ISO-certifiering.",
+    tl4_h:"24/7 NOC lanserades", tl4_p:"Lanserade Network Operations Centre med fyra niors drifttid.",
+    tl5_h:"Centraleuropeisk satsning", tl5_p:"Säkrade kontrakt i Polen och Estland. ISO 14001 uppnådd.",
+    tl6_h:"AI-infrastrukturspecialisering", tl6_p:"Lanserade AI/ML-infrastrukturpraktik för GPU-kluster och flytande kylning.",
+    team_eyebrow:"Ledningsgrupp", team_title:"Personerna bakom projekten.",
+    team_desc:"Vår ledning kombinerar djup ingenjörskompetens med affärsmässighet.",
+    team1_role:"Verkställande direktör", team1_bio:"20+ år inom nordisk infrastruktur.",
+    team2_role:"Driftchef", team2_bio:"Specialist på logistik och drift som skalade Diginext till 120 ingenjörer.",
+    team3_role:"Teknisk direktör", team3_bio:"Tidigare datacenterarkitekt på Equinix.",
+    reach_eyebrow:"Vår räckvidd", reach_title:"Aktiva i 6 länder med Norden i centrum.",
+    reach_desc:"Våra team är inbäddade i aktiva projekt i Sverige, Norge, Finland, Danmark, Polen och Estland.",
+    reach_se:"Sverige — Vallentuna HK + Stockholmskontor",
+    reach_no:"Norge — Oslokontor, aktivt Kristiansandprojekt",
+    reach_fi:"Finland — Helsingfors partnerkontor",
+    reach_pl:"Polen — Warszawa, flerfasigt molnregionsprojekt",
+    reach_cta:"Arbeta med oss →",
+    cta_eyebrow:"Redo när du är", cta_title:"Vill du arbeta med oss? <span>Låt oss prata.</span>",
+    cta_desc:"Berätta om projektet — vi ger dig ett rakt svar om scope, tidslinje och kostnad inom en arbetsdag.",
+    cta_btn1:"Starta ett samtal", cta_btn2:"Gå med i teamet",
+    footer_about:"En svensk ingenjörspartner för digital infrastruktur i Norden och Centraleuropa.",
+    footer_services:"Tjänster", footer_cabling:"Strukturerad kablage", footer_fibre:"Fiberoptik",
+    footer_dc:"Datacenterinstallation", footer_network:"Nätverksinfrastruktur", footer_noc:"24/7 NOC-support",
+    footer_company:"Företag", footer_about_link:"Om oss", footer_industries:"Branscher",
+    footer_accred:"Ackrediteringar", footer_esg:"ESG & Hållbarhet", footer_careers:"Karriär",
+    footer_contact:"Kontakt", footer_rights:"Alla rättigheter förbehållna.",
+    footer_privacy:"Integritetspolicy", footer_terms:"Villkor", footer_gdpr:"GDPR", footer_imprint:"Impressum"
+  }
+};
+
+function applyLang(lang) {
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
+  document.querySelectorAll('.lang-switch__btn').forEach(b => {
+    b.classList.toggle('is-active', b.dataset.lang === lang);
+  });
+  localStorage.setItem('dnLang', lang);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('dnLang') || 'en';
+  applyLang(saved);
+  document.querySelectorAll('.lang-switch__btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+});
+
+/* Scroll reveal */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.12 });
+document.querySelectorAll('.scroll-reveal, .stat-cell').forEach(el => io.observe(el));
+
+/* Nav scroll shadow */
+window.addEventListener('scroll', () => {
+  document.getElementById('siteNav').classList.toggle('is-scrolled', window.scrollY > 10);
+});
+
+/* Mobile nav */
+(function() {
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('siteNav');
+  if (!toggle || !nav) return;
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.getElementById('primaryNav').addEventListener('click', e => {
+    if (e.target.tagName === 'A') { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Start a Project — Diginext Scandinavia</title>
+<meta name="description" content="Tell us about your infrastructure project. Our engineering team will respond within 2 hours." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<meta name="theme-color" content="#0E171D">
+</head>
+<body>
+
+<!-- ========= TOPBAR ========= -->
+<div class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__left">
+      <span class="topbar__item"><span class="status-dot"></span> <span data-t="systems_nominal">All systems nominal</span></span>
+      <a href="tel:+46735767520" class="topbar__item">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 10.5c-.8-.8-1.9-.8-2.7 0l-.9.9c-1.5-.8-2.8-2.1-3.6-3.6l.9-.9c.8-.8.8-1.9 0-2.7L6.1 3.1C5.3 2.3 4.2 2.3 3.4 3L2.7 3.7C1.4 5 1.8 7.3 3.5 9.7c1.4 2 3.3 3.8 5.3 5 1 .5 2.1.8 3 .8.8 0 1.5-.2 2-.7l.7-.7c.8-.8.8-1.9 0-2.7l-1-1z"/></svg>
+        +46 73 576 75 20
+      </a>
+    </div>
+    <div class="topbar__right">
+      <a href="mailto:info@diginext.se" class="topbar__item">info@diginext.se</a>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-switch__btn is-active" data-lang="en">EN</button>
+        <button class="lang-switch__btn" data-lang="sv">SV</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========= NAV ========= -->
+<nav class="nav" id="siteNav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo">
+      <img src="logo.svg" alt="Diginext Scandinavia" class="logo-img" />
+    </a>
+    <ul class="nav__links" id="primaryNav">
+      <li><a href="index.html" data-t="nav_home">Home</a></li>
+      <li><a href="services.html" data-t="nav_services">Services</a></li>
+      <li><a href="industries.html" data-t="nav_industries">Industries</a></li>
+      <li><a href="about.html" data-t="nav_about">About</a></li>
+      <li><a href="careers.html" data-t="nav_careers">Careers</a></li>
+      <li><a href="contact.html" class="is-active" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav__cta-group">
+      <a href="tel:+46735767520" class="btn btn--ghost btn--sm">+46 73 576 75 20</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========= HERO ========= -->
+<section class="hero" style="min-height:400px;">
+  <div class="hero__bg">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=2000&q=80&auto=format&fit=crop" alt="" loading="eager" />
+  </div>
+  <div class="hero__grid-overlay"></div>
+  <div class="hero__inner" style="padding-top:72px; padding-bottom:72px;">
+    <div class="hero__content">
+      <span class="eyebrow" data-t="contact_eyebrow">Project Builder</span>
+      <h1 class="hero__title" style="font-size:clamp(34px,4.5vw,62px);" data-t="contact_title">Let's Build Something <span>Exceptional</span></h1>
+      <p class="hero__desc" data-t="contact_desc">Tell us about your project in three simple steps. Our senior engineering team reviews every enquiry personally — and responds within 2 business hours.</p>
+      <div class="hero__badges" style="margin-top:24px;">
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="contact_badge1">&lt;2h Response Guarantee</span></span>
+        <span class="hero__badge"><span class="hero__badge-dot"></span> <span data-t="contact_badge2">No-obligation Consultation</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= PROJECT WIZARD ========= -->
+<section class="wizard-section" id="wizard">
+  <div class="section__inner">
+    <div class="wizard-wrap">
+
+      <!-- Progress Bar -->
+      <div class="wizard-steps-bar" id="wizardStepsBar">
+        <div class="wizard-step-indicator is-active" data-step="1">
+          <div class="wizard-step-indicator__num">1</div>
+          <div class="wizard-step-indicator__label" data-t="wizard_step1_label">What to Build</div>
+        </div>
+        <div class="wizard-step-indicator" data-step="2">
+          <div class="wizard-step-indicator__num">2</div>
+          <div class="wizard-step-indicator__label" data-t="wizard_step2_label">Where</div>
+        </div>
+        <div class="wizard-step-indicator" data-step="3">
+          <div class="wizard-step-indicator__num">3</div>
+          <div class="wizard-step-indicator__label" data-t="wizard_step3_label">Contact Details</div>
+        </div>
+      </div>
+
+      <!-- ---- STEP 1: What are you building? ---- -->
+      <div class="wizard-pane is-active" id="step1">
+        <div class="wizard-card">
+          <h2 class="wizard-card__title" data-t="step1_title">What are you building?</h2>
+          <p class="wizard-card__sub" data-t="step1_sub">Select the type of infrastructure project you need help with.</p>
+
+          <div class="build-types">
+            <button class="build-type-btn" data-type="Hyperscale" onclick="selectBuildType(this)">
+              <div class="build-type-btn__img">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop" alt="Hyperscale" loading="lazy" />
+              </div>
+              <div class="build-type-btn__label" data-t="type_hyperscale_label">Hyperscale</div>
+              <div class="build-type-btn__title" data-t="type_hyperscale_title">Hyperscale Data Centre</div>
+              <p class="build-type-btn__desc" data-t="wizard_hyper_desc">Large-scale campus deployments from 5MW to 100MW+. Structured cabling, fibre, cooling, and full project management.</p>
+            </button>
+
+            <button class="build-type-btn" data-type="Edge" onclick="selectBuildType(this)">
+              <div class="build-type-btn__img">
+                <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?w=600&q=80&auto=format&fit=crop" alt="Edge" loading="lazy" />
+              </div>
+              <div class="build-type-btn__label" data-t="type_edge_label">Edge</div>
+              <div class="build-type-btn__title" data-t="type_edge_title">Edge Computing Node</div>
+              <p class="build-type-btn__desc" data-t="wizard_edge_desc">Distributed micro data centres, 5G RAN sites, and edge PoP deployments requiring rapid, repeatable rollout.</p>
+            </button>
+
+            <button class="build-type-btn" data-type="Enterprise" onclick="selectBuildType(this)">
+              <div class="build-type-btn__img">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80&auto=format&fit=crop" alt="Enterprise" loading="lazy" />
+              </div>
+              <div class="build-type-btn__label" data-t="type_enterprise_label">Enterprise</div>
+              <div class="build-type-btn__title" data-t="type_enterprise_title">Enterprise Facility</div>
+              <p class="build-type-btn__desc" data-t="wizard_enterprise_desc">Server rooms, MER/IDF upgrades, office cabling, and co-location installations for corporate environments.</p>
+            </button>
+          </div>
+
+          <div style="margin-top:20px;">
+            <label style="font-family:var(--mono); font-size:11px; color:var(--gray); text-transform:uppercase; letter-spacing:0.09em; display:block; margin-bottom:8px;" data-t="step1_size_label">Approximate project scale</label>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;" id="scaleOptions">
+              <button class="wizard-region-btn" style="font-size:13px; padding:10px 16px;" onclick="selectScale(this)" data-scale="Small (&lt;500m²)"><span data-t="scale_small">Small (&lt;500m²)</span></button>
+              <button class="wizard-region-btn" style="font-size:13px; padding:10px 16px;" onclick="selectScale(this)" data-scale="Medium (500–2000m²)"><span data-t="scale_medium">Medium (500–2000m²)</span></button>
+              <button class="wizard-region-btn" style="font-size:13px; padding:10px 16px;" onclick="selectScale(this)" data-scale="Large (2000–10000m²)"><span data-t="scale_large">Large (2000–10000m²)</span></button>
+              <button class="wizard-region-btn" style="font-size:13px; padding:10px 16px;" onclick="selectScale(this)" data-scale="Hyperscale (10000m²+)"><span data-t="scale_hyperscale">Hyperscale (10,000m²+)</span></button>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <span style="font-size:13px; color:var(--gray);" data-t="step1_hint">Select a project type to continue</span>
+            <button class="btn btn--primary" id="step1Next" disabled onclick="goStep(2)">
+              <span data-t="wizard_next">Next: Location</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- STEP 2: Where? ---- -->
+      <div class="wizard-pane" id="step2">
+        <div class="wizard-card">
+          <h2 class="wizard-card__title" data-t="step2_title">Where is the project located?</h2>
+          <p class="wizard-card__sub" data-t="step2_sub">Select a country or region, or point to a location on the map.</p>
+
+          <div class="wizard-map-regions" style="margin-bottom:20px;">
+            <button class="wizard-region-btn" data-region="Sweden" onclick="selectRegion(this, 59.3293, 18.0686)">
+              <span class="wizard-region-btn__flag">🇸🇪</span>
+              Sweden
+              <span class="wizard-region-btn__sub">Stockholm / Malmö</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Norway" onclick="selectRegion(this, 59.9139, 10.7522)">
+              <span class="wizard-region-btn__flag">🇳🇴</span>
+              Norway
+              <span class="wizard-region-btn__sub">Oslo / Bergen</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Finland" onclick="selectRegion(this, 60.1699, 24.9384)">
+              <span class="wizard-region-btn__flag">🇫🇮</span>
+              Finland
+              <span class="wizard-region-btn__sub">Helsinki / Tampere</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Denmark" onclick="selectRegion(this, 55.6761, 12.5683)">
+              <span class="wizard-region-btn__flag">🇩🇰</span>
+              Denmark
+              <span class="wizard-region-btn__sub">Copenhagen / Aarhus</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Poland" onclick="selectRegion(this, 52.2297, 21.0122)">
+              <span class="wizard-region-btn__flag">🇵🇱</span>
+              Poland
+              <span class="wizard-region-btn__sub">Warsaw / Wrocław</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Estonia" onclick="selectRegion(this, 59.4370, 24.7536)">
+              <span class="wizard-region-btn__flag">🇪🇪</span>
+              Estonia
+              <span class="wizard-region-btn__sub">Tallinn</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Germany" onclick="selectRegion(this, 52.5200, 13.4050)">
+              <span class="wizard-region-btn__flag">🇩🇪</span>
+              Germany
+              <span class="wizard-region-btn__sub">Frankfurt / Berlin</span>
+            </button>
+            <button class="wizard-region-btn" data-region="Other" onclick="selectRegion(this, 54.5260, 15.2551)">
+              <span class="wizard-region-btn__flag">🌍</span>
+              Other
+              <span class="wizard-region-btn__sub">Rest of Europe</span>
+            </button>
+          </div>
+
+          <div class="wizard-map-container">
+            <iframe
+              id="mapFrame"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=4.4,54.5,31.8,71.5&layer=mapnik"
+              allowfullscreen=""
+              loading="lazy"
+              title="Project location map">
+            </iframe>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn--ghost" onclick="goStep(1)">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+              <span data-t="wizard_back">Back</span>
+            </button>
+            <button class="btn btn--primary" id="step2Next" disabled onclick="goStep(3)">
+              <span data-t="wizard_next2">Next: Contact Details</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- STEP 3: Contact Details ---- -->
+      <div class="wizard-pane" id="step3">
+        <div class="wizard-card">
+          <h2 class="wizard-card__title" data-t="step3_title">Your Contact Details</h2>
+          <p class="wizard-card__sub" data-t="step3_sub">Almost done — tell us who you are so we can reach you.</p>
+
+          <!-- Summary -->
+          <div class="wizard-summary" id="wizardSummary">
+            <div class="wizard-summary__title" data-t="step3_summary">Your project so far</div>
+            <div class="wizard-summary__items" id="summaryItems"></div>
+          </div>
+
+          <div class="wizard-form-grid">
+            <div class="form__field">
+              <label class="form__label" data-t="field_first_name">First Name <span>*</span></label>
+              <input class="form__input" type="text" id="firstName" required placeholder="Anna" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" data-t="field_last_name">Last Name <span>*</span></label>
+              <input class="form__input" type="text" id="lastName" required placeholder="Johansson" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" data-t="field_company">Company <span>*</span></label>
+              <input class="form__input" type="text" id="companyName" required placeholder="Acme Data AB" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" data-t="field_role">Your Role</label>
+              <select class="form__input form__select" id="userRole">
+                <option value="">Select role</option>
+                <option>CTO / CIO</option>
+                <option>VP / Director of IT</option>
+                <option>Infrastructure Manager</option>
+                <option>Project Manager</option>
+                <option>Procurement</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" data-t="field_email">Work Email <span>*</span></label>
+              <input class="form__input" type="email" id="emailAddr" required placeholder="anna@company.com" />
+            </div>
+            <div class="form__field">
+              <label class="form__label" data-t="field_phone">Phone Number</label>
+              <input class="form__input" type="tel" id="phoneNum" placeholder="+46 70 123 45 67" />
+            </div>
+            <div class="form__field form__field--full">
+              <label class="form__label" data-t="field_timeline">Target Timeline</label>
+              <select class="form__input form__select" id="timeline">
+                <option value="">When do you need to start?</option>
+                <option>ASAP — within 1 month</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>6–12 months</option>
+                <option>Planning phase — 12+ months</option>
+              </select>
+            </div>
+            <div class="form__field form__field--full">
+              <label class="form__label" data-t="field_message">Project Details</label>
+              <textarea class="form__input form__input--textarea" id="projectDetails" rows="5" placeholder="Describe your project — site specifications, capacity requirements, existing infrastructure, special challenges or constraints..."></textarea>
+            </div>
+            <div class="form__field form__field--full">
+              <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:14px; color:var(--ink-2); font-family:var(--sans);">
+                <input type="checkbox" id="gdprConsent" style="margin-top:2px; flex-shrink:0;" />
+                <span data-t="field_gdpr">I agree to Diginext Scandinavia processing my data for the purpose of responding to this enquiry. View our <a href="#" style="color:var(--navy-700); text-decoration:underline;">Privacy Policy</a>.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn--ghost" onclick="goStep(2)">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+              <span data-t="wizard_back">Back</span>
+            </button>
+            <button class="btn btn--accent btn--lg" onclick="submitWizard()">
+              <span data-t="wizard_submit">Submit Project Brief</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- SUCCESS ---- -->
+      <div class="wizard-pane" id="stepSuccess">
+        <div class="wizard-card">
+          <div class="wizard-success">
+            <div class="wizard-success__icon">✓</div>
+            <h2 class="wizard-success__title" data-t="success_title">Project Brief Received!</h2>
+            <p class="wizard-success__body" data-t="success_body">Thank you. A senior engineer will review your brief and reach out within 2 business hours. Check your email for a confirmation.</p>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+              <a href="index.html" class="btn btn--primary" data-t="success_home">Back to Homepage</a>
+              <a href="services.html" class="btn btn--ghost" data-t="success_services">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= CONTACT CARDS ========= -->
+<section class="section">
+  <div class="section__inner">
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:start;">
+      <div>
+        <span class="eyebrow" data-t="offices_eyebrow">Our Offices</span>
+        <h2 class="section__title" style="margin-bottom:24px;" data-t="offices_title">Find Us</h2>
+        <p style="font-size:16px; color:var(--ink-2); line-height:1.7; margin:0 0 32px;" data-t="offices_desc">Our headquarters is in Vallentuna, Sweden, with satellite offices in Oslo, Helsinki, and Warsaw. Our field teams operate across all 6 active countries.</p>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop" alt="Office" style="border-radius:8px; width:100%; aspect-ratio:16/9; object-fit:cover; filter:saturate(0.8);" loading="lazy" />
+      </div>
+      <div class="contact-info" style="padding-top:68px;">
+        <div class="contact-card">
+          <div class="contact-card__label" data-t="hq_label">Sweden — Headquarters</div>
+          <h3 class="contact-card__name">Diginext Solutions AB</h3>
+          <p class="contact-card__body">Musseronvägen 20<br/>186 56 Vallentuna<br/>Sweden</p>
+          <a class="contact-card__link" href="mailto:info@diginext.se">info@diginext.se →</a>
+          <a class="contact-card__link" href="tel:+46735767520">+46 73 576 75 20 →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__label" data-t="norway_label">Norway</div>
+          <h3 class="contact-card__name">Diginext Norway AS</h3>
+          <p class="contact-card__body">Lysaker Torg 35<br/>1366 Lysaker, Oslo<br/>Norway</p>
+          <a class="contact-card__link" href="mailto:norway@diginext.se">norway@diginext.se →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__label" data-t="finland_label">Finland</div>
+          <h3 class="contact-card__name">Diginext Finland OY</h3>
+          <p class="contact-card__body">Keilaranta 1<br/>02150 Espoo, Helsinki<br/>Finland</p>
+          <a class="contact-card__link" href="mailto:finland@diginext.se">finland@diginext.se →</a>
+        </div>
+        <div class="contact-card" style="background:var(--navy-900); border-color:var(--navy-800);">
+          <div class="contact-card__label" style="color:var(--cyan);" data-t="noc_label">24/7 Emergency NOC</div>
+          <h3 class="contact-card__name" style="color:#fff;" data-t="noc_title">Network Operations Centre</h3>
+          <p class="contact-card__body" style="color:rgba(255,255,255,0.65);" data-t="noc_body">For live incidents and emergency support — available round the clock, 365 days.</p>
+          <a class="contact-card__link" style="color:var(--cyan); border-bottom-color:rgba(16,52,166,0.3);" href="tel:+46735767520">+46 73 576 75 20 (24/7) →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__top">
+      <div class="foot__brand-block">
+        <a href="index.html" class="foot__brand">
+          <img src="Diginext_logo_footer.png" alt="Diginext Scandinavia" class="logo-img" />
+        </a>
+        <p class="foot__about" data-t="footer_about">A Swedish engineering partner for digital infrastructure across the Nordics. ISO-certified, 24/7 support, four-nines uptime.</p>
+         <div class="foot__social">
+          <a href="https://se.linkedin.com/company/diginext_scandinavia" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 5C4.3 5 5 4.3 5 3.5S4.3 2 3.5 2 2 2.7 2 3.5 2.7 5 3.5 5zM2.2 6.5h2.6V14H2.2V6.5zM6.8 6.5h2.5v1h0c.3-.6 1.2-1.2 2.4-1.2 2.6 0 3.1 1.7 3.1 3.9V14h-2.6V10.5c0-.8 0-1.9-1.2-1.9s-1.3 1-1.3 1.9V14H6.8V6.5z"/></svg></a>
+          <a href="https://www.instagram.com/diginextscandinavia/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="3"/><circle cx="8" cy="8" r="2.5"/><circle cx="11.5" cy="4.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/diginextscandinavia/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M9 14V8.5h2l.3-2.3H9V4.9c0-.7.2-1.1 1.1-1.1h1.2V1.7C11 1.7 10.3 1.6 9.5 1.6c-1.7 0-2.9 1-2.9 3v1.7H4.5v2.3h2.1V14H9z"/></svg></a>
+          <a href="https://wa.me/46735767520" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1C4.14 1 1 4.14 1 8c0 1.24.33 2.42.9 3.44L1 15l3.64-.88C5.62 14.68 6.79 15 8 15c3.86 0 7-3.14 7-7s-3.14-7-7-7zm3.64 9.86c-.16.44-.92.84-1.28.88-.32.04-.73.06-1.18-.08-.27-.08-.62-.2-1.06-.4-1.86-.8-3.08-2.68-3.18-2.8-.1-.12-.8-1.06-.8-2.02 0-.96.5-1.44.68-1.64.18-.2.4-.24.52-.24.14 0 .26.002.38.008.12.006.3-.044.46.36.16.4.56 1.36.6 1.46.04.1.07.22.014.34-.056.12-.084.2-.164.3-.08.1-.17.22-.24.3-.08.08-.16.17-.07.33.1.16.44.72.94 1.16.64.58 1.18.76 1.34.84.16.08.26.07.36-.04.1-.1.42-.48.54-.64.12-.16.22-.14.38-.08.16.06 1 .472 1.17.558.17.086.28.128.32.2.04.074-.002.44-.16.88z"/></svg></a>
+        </div>
+        <div class="foot__certifications" style="margin-top:16px;">
+          <span class="foot__cert-badge">ISO 27001</span>
+          <span class="foot__cert-badge">ISO 9001</span>
+          <span class="foot__cert-badge">Cisco Premier</span>
+        </div>
+      </div>
+      <div class="foot__col">
+        <h4 data-t="footer_services">Services</h4>
+        <a href="services.html" data-t="footer_cabling">Structured Cabling</a>
+        <a href="services.html" data-t="footer_fibre">Fibre Optic</a>
+        <a href="services.html" data-t="footer_dc">Data Center Installation</a>
+        <a href="services.html" data-t="footer_network">Network Infrastructure</a>
+        <a href="services.html" data-t="footer_noc">24/7 NOC Support</a>
+      </div>
+      <div class="foot__col">
+        <h4 data-t="footer_company">Company</h4>
+        <a href="about.html" data-t="footer_about_link">About Us</a>
+        <a href="industries.html" data-t="footer_industries">Industries</a>
+        <a href="index.html#accreditations" data-t="footer_accred">Accreditations</a>
+        <a href="index.html#esg" data-t="footer_esg">ESG & Sustainability</a>
+        <a href="careers.html" data-t="footer_careers">Careers</a>
+      </div>
+      <div class="foot__col">
+        <h4 data-t="footer_contact">Contact</h4>
+        <a href="mailto:info@diginext.se">info@diginext.se</a>
+        <a href="tel:+46735767520">+46 73 576 75 20</a>
+        <a href="#">Musseronvägen 20, Vallentuna</a>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 Diginext Solutions AB. <span data-t="footer_rights">All rights reserved.</span></span>
+      <div class="foot__bottom-links">
+        <a href="privacy.html" data-t="footer_privacy">Privacy Policy</a>
+        <a href="terms.html" data-t="footer_terms">Terms</a>
+        <a href="gdpr.html" data-t="footer_gdpr">GDPR</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   LANGUAGE
+   ============================================================ */
+const TRANSLATIONS = {
+  en: {
+    systems_nominal:"All systems nominal",
+    nav_home:"Home",nav_services:"Services",nav_industries:"Industries",nav_about:"About",nav_careers:"Careers",nav_contact:"Contact",
+    contact_eyebrow:"Project Builder",
+    contact_title:"Let's Build Something <span>Exceptional</span>",
+    contact_desc:"Tell us about your project in three simple steps.",
+    contact_badge1:"<2h Response Guarantee", contact_badge2:"No-obligation Consultation",
+    wizard_step1_label:"What to Build", wizard_step2_label:"Where", wizard_step3_label:"Contact Details",
+    step1_title:"What are you building?", step1_sub:"Select the type of infrastructure project.",
+    type_hyperscale_label:"Hyperscale", type_hyperscale_title:"Hyperscale Data Centre",
+    wizard_hyper_desc:"Large-scale campus deployments from 5MW to 100MW+.",
+    type_edge_label:"Edge", type_edge_title:"Edge Computing Node",
+    wizard_edge_desc:"Distributed micro data centres and 5G RAN sites.",
+    type_enterprise_label:"Enterprise", type_enterprise_title:"Enterprise Facility",
+    wizard_enterprise_desc:"Server rooms and co-location installations.",
+    step1_size_label:"Approximate project scale",
+    scale_small:"Small (<500m²)", scale_medium:"Medium (500–2000m²)", scale_large:"Large (2000–10000m²)", scale_hyperscale:"Hyperscale (10,000m²+)",
+    step1_hint:"Select a project type to continue",
+    wizard_next:"Next: Location", wizard_back:"Back", wizard_next2:"Next: Contact Details",
+    step2_title:"Where is the project located?", step2_sub:"Select a country or click the map.",
+    step3_title:"Your Contact Details", step3_sub:"Almost done — tell us who you are.",
+    step3_summary:"Your project so far",
+    field_first_name:"First Name", field_last_name:"Last Name", field_company:"Company",
+    field_role:"Your Role", field_email:"Work Email", field_phone:"Phone Number",
+    field_timeline:"Target Timeline", field_message:"Project Details",
+    field_gdpr:"I agree to Diginext Scandinavia processing my data for the purpose of responding to this enquiry.",
+    wizard_submit:"Submit Project Brief",
+    success_title:"Project Brief Received!", success_body:"A senior engineer will review your brief and reach out within 2 business hours.",
+    success_home:"Back to Homepage", success_services:"Explore Services",
+    offices_eyebrow:"Our Offices", offices_title:"Find Us",
+    offices_desc:"Our headquarters is in Vallentuna, Sweden, with satellite offices in Oslo, Helsinki, and Warsaw.",
+    hq_label:"Sweden — Headquarters", norway_label:"Norway", finland_label:"Finland",
+    noc_label:"24/7 Emergency NOC", noc_title:"Network Operations Centre",
+    noc_body:"For live incidents and emergency support — available round the clock, 365 days.",
+    footer_about:"A Swedish engineering partner for digital infrastructure across the Nordics.",
+    footer_services:"Services",footer_cabling:"Structured Cabling",footer_fibre:"Fibre Optic",
+    footer_dc:"Data Center Installation",footer_network:"Network Infrastructure",footer_noc:"24/7 NOC Support",
+    footer_company:"Company",footer_about_link:"About Us",footer_industries:"Industries",
+    footer_accred:"Accreditations",footer_esg:"ESG & Sustainability",footer_careers:"Careers",
+    footer_contact:"Contact",footer_rights:"All rights reserved.",
+    footer_privacy:"Privacy Policy",footer_terms:"Terms",footer_gdpr:"GDPR",
+  },
+  sv: {
+    systems_nominal:"Alla system nominella",
+    nav_home:"Hem",nav_services:"Tjänster",nav_industries:"Branscher",nav_about:"Om oss",nav_careers:"Karriär",nav_contact:"Kontakt",
+    contact_eyebrow:"Projektbyggare",
+    contact_title:"Låt oss Bygga något <span>Exceptionellt</span>",
+    contact_desc:"Berätta om ditt projekt i tre enkla steg.",
+    contact_badge1:"<2h Svarstidsgaranti", contact_badge2:"Gratis Konsultation",
+    wizard_step1_label:"Vad att bygga", wizard_step2_label:"Var", wizard_step3_label:"Kontaktuppgifter",
+    step1_title:"Vad bygger du?", step1_sub:"Välj typ av infrastrukturprojekt.",
+    type_hyperscale_label:"Hyperscale", type_hyperscale_title:"Hyperscale-datacenter",
+    wizard_hyper_desc:"Storskaliga campusdriftsättningar från 5MW till 100MW+.",
+    type_edge_label:"Edge", type_edge_title:"Edge Computing-nod",
+    wizard_edge_desc:"Distribuerade mikro-datacenter och 5G RAN-platser.",
+    type_enterprise_label:"Enterprise", type_enterprise_title:"Företagsanläggning",
+    wizard_enterprise_desc:"Serverrum och co-location-installationer.",
+    step1_size_label:"Ungefärlig projektskala",
+    scale_small:"Litet (<500m²)", scale_medium:"Medium (500–2000m²)", scale_large:"Stort (2000–10000m²)", scale_hyperscale:"Hyperscale (10 000m²+)",
+    step1_hint:"Välj en projekttyp för att fortsätta",
+    wizard_next:"Nästa: Plats", wizard_back:"Tillbaka", wizard_next2:"Nästa: Kontaktuppgifter",
+    step2_title:"Var är projektet beläget?", step2_sub:"Välj ett land eller klicka på kartan.",
+    step3_title:"Dina Kontaktuppgifter", step3_sub:"Nästan klar — berätta vem du är.",
+    step3_summary:"Ditt projekt hittills",
+    field_first_name:"Förnamn", field_last_name:"Efternamn", field_company:"Företag",
+    field_role:"Din roll", field_email:"Jobbmail", field_phone:"Telefonnummer",
+    field_timeline:"Tidslinje", field_message:"Projektdetaljer",
+    field_gdpr:"Jag samtycker till att Diginext Scandinavia behandlar mina uppgifter för ändamålet att svara på denna förfrågan.",
+    wizard_submit:"Skicka projektbeskrivning",
+    success_title:"Projektbeskrivning Mottagen!", success_body:"En senior ingenjör granskar din beskrivning och kontaktar dig inom 2 arbetstimmar.",
+    success_home:"Tillbaka till startsidan", success_services:"Utforska Tjänster",
+    offices_eyebrow:"Våra Kontor", offices_title:"Hitta oss",
+    offices_desc:"Vårt huvudkontor är i Vallentuna, Sverige, med satellitkontor i Oslo, Helsingfors och Warszawa.",
+    hq_label:"Sverige — Huvudkontor", norway_label:"Norge", finland_label:"Finland",
+    noc_label:"24/7 Akut NOC", noc_title:"Nätverksoperationscentrum",
+    noc_body:"För akuta incidenter och nödstöd — tillgänglig dygnet runt, 365 dagar.",
+    footer_about:"En svensk ingenjörspartner för digital infrastruktur i Norden.",
+    footer_services:"Tjänster",footer_cabling:"Strukturerad Kablering",footer_fibre:"Fibernätverk",
+    footer_dc:"Datacenterinstallation",footer_network:"Nätverksinfrastruktur",footer_noc:"24/7 NOC-Support",
+    footer_company:"Företag",footer_about_link:"Om oss",footer_industries:"Branscher",
+    footer_accred:"Ackrediteringar",footer_esg:"ESG & Hållbarhet",footer_careers:"Karriär",
+    footer_contact:"Kontakt",footer_rights:"Alla rättigheter förbehållna.",
+    footer_privacy:"Integritetspolicy",footer_terms:"Villkor",footer_gdpr:"GDPR",
+  }
+};
+let currentLang = localStorage.getItem('diginext_lang') || 'en';
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('diginext_lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('.lang-switch__btn').forEach(btn => {
+    btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang(currentLang);
+  document.querySelectorAll('.lang-switch__btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+  });
+  // Pre-select from URL param
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get('type');
+  if (type) {
+    const btn = document.querySelector(`.build-type-btn[data-type="${type.charAt(0).toUpperCase()+type.slice(1)}"]`);
+    if (btn) selectBuildType(btn);
+  }
+});
+
+/* ============================================================
+   WIZARD STATE
+   ============================================================ */
+let wizardData = { type: null, scale: null, region: null, lat: null, lng: null };
+let currentStep = 1;
+
+function goStep(n) {
+  document.querySelectorAll('.wizard-pane').forEach(p => p.classList.remove('is-active'));
+  document.querySelectorAll('.wizard-step-indicator').forEach((ind, i) => {
+    ind.classList.toggle('is-active', i + 1 === n);
+    ind.classList.toggle('is-done', i + 1 < n);
+  });
+  if (n === 3) updateSummary();
+  const paneId = n <= 3 ? `step${n}` : 'stepSuccess';
+  document.getElementById(paneId).classList.add('is-active');
+  currentStep = n;
+  window.scrollTo({ top: document.getElementById('wizard').offsetTop - 80, behavior: 'smooth' });
+}
+
+function selectBuildType(btn) {
+  document.querySelectorAll('.build-type-btn').forEach(b => b.classList.remove('is-selected'));
+  btn.classList.add('is-selected');
+  wizardData.type = btn.getAttribute('data-type');
+  document.getElementById('step1Next').disabled = false;
+}
+
+function selectScale(btn) {
+  document.querySelectorAll('#scaleOptions .wizard-region-btn').forEach(b => b.classList.remove('is-selected'));
+  btn.classList.add('is-selected');
+  wizardData.scale = btn.getAttribute('data-scale');
+}
+
+function selectRegion(btn, lat, lng) {
+  document.querySelectorAll('.wizard-region-btn[data-region]').forEach(b => b.classList.remove('is-selected'));
+  btn.classList.add('is-selected');
+  wizardData.region = btn.getAttribute('data-region');
+  wizardData.lat = lat; wizardData.lng = lng;
+  document.getElementById('step2Next').disabled = false;
+  // Update map
+  const zoom = 6;
+  document.getElementById('mapFrame').src =
+    `https://www.openstreetmap.org/export/embed.html?bbox=${lng-4},${lat-3},${lng+4},${lat+3}&layer=mapnik&marker=${lat},${lng}`;
+}
+
+function updateSummary() {
+  const items = document.getElementById('summaryItems');
+  const parts = [wizardData.type, wizardData.scale, wizardData.region].filter(Boolean);
+  items.innerHTML = parts.map(p => `<span class="wizard-summary__item">${p}</span>`).join('');
+}
+
+function submitWizard() {
+  const first = document.getElementById('firstName').value.trim();
+  const last = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('emailAddr').value.trim();
+  const company = document.getElementById('companyName').value.trim();
+  const gdpr = document.getElementById('gdprConsent').checked;
+  if (!first || !last || !email || !company) {
+    alert('Please fill in all required fields (First Name, Last Name, Company, Email).');
+    return;
+  }
+  if (!gdpr) {
+    alert('Please accept the data processing consent to submit.');
+    return;
+  }
+  // In production, POST to backend here
+  console.log('Project Brief Submitted:', { ...wizardData, first, last, email, company });
+  document.querySelectorAll('.wizard-step-indicator').forEach(ind => ind.classList.remove('is-active'));
+  document.querySelectorAll('.wizard-pane').forEach(p => p.classList.remove('is-active'));
+  document.getElementById('stepSuccess').classList.add('is-active');
+  window.scrollTo({ top: document.getElementById('wizard').offsetTop - 80, behavior: 'smooth' });
+}
+
+/* ============================================================
+   NAV + LANG SWITCH
+   ============================================================ */
+window.addEventListener('scroll', () => {
+  document.getElementById('siteNav').classList.toggle('is-scrolled', window.scrollY > 8);
+}, { passive: true });
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('siteNav');
+  const links = document.getElementById('primaryNav');
+  if (!toggle || !nav || !links) return;
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>
