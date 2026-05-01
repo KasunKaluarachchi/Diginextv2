@@ -441,10 +441,31 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--rule-2);
+  color: var(--cyan);
   margin-bottom: 20px;
 }
 .eyebrow::before {
+  content: "";
+  width: 24px; height: 2px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.section__head--center .eyebrow_title { justify-content: center; }
+
+.eyebrow_title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rule-2);
+  margin-bottom: 20px;
+}
+.eyebrow_title::before {
   content: "";
   width: 24px; height: 2px;
   background: currentColor;
