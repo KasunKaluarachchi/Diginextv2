@@ -441,7 +441,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--rule-2);
   margin-bottom: 20px;
 }
 .eyebrow::before {
