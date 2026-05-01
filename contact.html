@@ -103,6 +103,15 @@
           <h2 class="wizard-card__title" data-t="step1_title">What are you building?</h2>
           <p class="wizard-card__sub" data-t="step1_sub">Select the type of infrastructure project you need help with.</p>
 
+          <!-- Step 1 guidance -->
+          <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1034A6" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <div style="font-size:13px;color:#1e3a8a;line-height:1.6;">
+              <strong style="display:block;margin-bottom:3px;">Not sure which type fits your project?</strong>
+              Choose <em>Hyperscale</em> for large-scale campus or cloud deployments, <em>Edge</em> for distributed micro-sites or 5G nodes, and <em>Enterprise</em> for server rooms, office cabling or colocation installs. You can describe specifics in Step 3 — our engineering team will confirm the right scope.
+            </div>
+          </div>
+
           <div class="build-types">
             <button class="build-type-btn" data-type="Hyperscale" onclick="selectBuildType(this)">
               <div class="build-type-btn__img">
@@ -142,6 +151,12 @@
             </div>
           </div>
 
+          <!-- Scale guidance -->
+          <div style="margin-top:12px;font-size:12px;color:var(--gray);display:flex;align-items:center;gap:6px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <span>Approximate size helps us assign the right team size. An exact figure isn't needed at this stage.</span>
+          </div>
+
           <div class="wizard-nav">
             <span style="font-size:13px; color:var(--gray);" data-t="step1_hint">Select a project type to continue</span>
             <button class="btn btn--primary" id="step1Next" disabled onclick="goStep(2)">
@@ -158,16 +173,25 @@
           <h2 class="wizard-card__title" data-t="step2_title">Where is the project located?</h2>
           <p class="wizard-card__sub" data-t="step2_sub">Select a country or region, or point to a location on the map.</p>
 
+          <!-- Step 2 guidance -->
+          <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1034A6" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div style="font-size:13px;color:#1e3a8a;line-height:1.6;">
+              <strong style="display:block;margin-bottom:3px;">We have completed projects in 7 countries across Europe.</strong>
+              We are currently active in <strong>Sweden</strong> (Stockholm, Gävle, Sandviken) and <strong>Denmark</strong> (Copenhagen), with a branch office covering <strong>Norway</strong> (operating as Diginext IT Solutions Norway NUF). We can deploy teams to any European location — just select the closest country and describe the city in your project details.
+            </div>
+          </div>
+
           <div class="wizard-map-regions" style="margin-bottom:20px;">
             <button class="wizard-region-btn" data-region="Sweden" onclick="selectRegion(this, 59.3293, 18.0686)">
               <span class="wizard-region-btn__flag">🇸🇪</span>
               Sweden
-              <span class="wizard-region-btn__sub">Stockholm / Malmö</span>
+              <span class="wizard-region-btn__sub">Stockholm · Gävle · Sandviken ✓ Active</span>
             </button>
             <button class="wizard-region-btn" data-region="Norway" onclick="selectRegion(this, 59.9139, 10.7522)">
               <span class="wizard-region-btn__flag">🇳🇴</span>
               Norway
-              <span class="wizard-region-btn__sub">Oslo / Bergen</span>
+              <span class="wizard-region-btn__sub">Oslo · Hamar · Kristiansand</span>
             </button>
             <button class="wizard-region-btn" data-region="Finland" onclick="selectRegion(this, 60.1699, 24.9384)">
               <span class="wizard-region-btn__flag">🇫🇮</span>
@@ -177,7 +201,7 @@
             <button class="wizard-region-btn" data-region="Denmark" onclick="selectRegion(this, 55.6761, 12.5683)">
               <span class="wizard-region-btn__flag">🇩🇰</span>
               Denmark
-              <span class="wizard-region-btn__sub">Copenhagen / Aarhus</span>
+              <span class="wizard-region-btn__sub">Copenhagen ✓ Active</span>
             </button>
             <button class="wizard-region-btn" data-region="Poland" onclick="selectRegion(this, 52.2297, 21.0122)">
               <span class="wizard-region-btn__flag">🇵🇱</span>
@@ -230,6 +254,15 @@
           <h2 class="wizard-card__title" data-t="step3_title">Your Contact Details</h2>
           <p class="wizard-card__sub" data-t="step3_sub">Almost done — tell us who you are so we can reach you.</p>
 
+          <!-- Step 3 guidance -->
+          <div style="display:flex;align-items:flex-start;gap:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 16px;margin-bottom:20px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1034A6" stroke-width="2" style="flex-shrink:0;margin-top:1px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div style="font-size:13px;color:#1e3a8a;line-height:1.6;">
+              <strong style="display:block;margin-bottom:3px;">What happens after you submit?</strong>
+              A senior Diginext engineer personally reviews every submission within <strong>2 business hours</strong>. We'll reach out to your work email to confirm scope, discuss timelines, and arrange a brief technical call if needed. Your information is handled in accordance with our <a href="privacy.html" style="color:#1034A6;text-decoration:underline;">Privacy Policy</a> and GDPR.
+            </div>
+          </div>
+
           <!-- Summary -->
           <div class="wizard-summary" id="wizardSummary">
             <div class="wizard-summary__title" data-t="step3_summary">Your project so far</div>
@@ -281,10 +314,18 @@
               </select>
             </div>
             <div class="form__field form__field--full">
-              <label class="form__label" data-t="field_message">Project Details</label>
-              <textarea class="form__input form__input--textarea" id="projectDetails" rows="5" placeholder="Describe your project — site specifications, capacity requirements, existing infrastructure, special challenges or constraints..."></textarea>
+              <label class="form__label" data-t="field_message" style="display:flex;align-items:center;gap:6px;">Project Details
+              <span title="Include: project location, size/rack count, scope of work, timeline and any special requirements" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--rule);font-size:10px;color:var(--gray);font-weight:700;">?</span>
+            </label>
+              <textarea class="form__input form__input--textarea" id="projectDetails" rows="5" placeholder="e.g. We need structured cabling for a 500-rack data hall in Stockholm, targeting completion in Q3 2025. The site currently has no existing infrastructure. Please include: location details, rack count or m², any existing cabling to be retained, preferred start date, and any access or safety constraints we should know about."></textarea>
             </div>
-            <div class="form__field form__field--full">
+            <div style="margin-top:-8px;margin-bottom:4px;font-size:11.5px;color:var(--gray);display:flex;gap:16px;flex-wrap:wrap;">
+                <span style="display:flex;align-items:center;gap:4px;"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>Location &amp; site details</span>
+                <span style="display:flex;align-items:center;gap:4px;"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>Scope &amp; rack count</span>
+                <span style="display:flex;align-items:center;gap:4px;"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>Target timeline</span>
+                <span style="display:flex;align-items:center;gap:4px;"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8l4 4 8-8"/></svg>Access or safety constraints</span>
+              </div>
+              <div class="form__field form__field--full">
               <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:14px; color:var(--ink-2); font-family:var(--sans);">
                 <input type="checkbox" id="gdprConsent" style="margin-top:2px; flex-shrink:0;" />
                 <span data-t="field_gdpr">I agree to Diginext Scandinavia processing my data for the purpose of responding to this enquiry. View our <a href="#" style="color:var(--navy-700); text-decoration:underline;">Privacy Policy</a>.</span>
