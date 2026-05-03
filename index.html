@@ -317,479 +317,373 @@
 
 <!-- ========= EUROPE MAP ========= -->
 <section id="coverage" style="background:#060d1c;overflow:hidden;padding:clamp(64px,9vw,120px) 0;position:relative;">
-  <!-- ambient glows -->
-  <div style="position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:1100px;height:700px;background:radial-gradient(ellipse,rgba(16,52,166,0.16) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
-  <div style="position:absolute;bottom:-80px;right:0;width:400px;height:400px;background:radial-gradient(circle,rgba(16,52,166,0.08) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
+<div style="position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:1100px;height:650px;background:radial-gradient(ellipse,rgba(16,52,166,.17) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
 
-  <div class="section__inner" style="position:relative;z-index:1;">
-
-    <!-- Header -->
-    <div class="section__head" style="margin-bottom:48px;">
-      <div class="section__head-left">
-        <span class="eyebrow" style="color:var(--cyan);" data-t="map_eyebrow">Where We Work</span>
-        <h2 class="section__title" style="color:#fff;" data-t="map_title">Building Europe's data infrastructure.</h2>
-      </div>
-      <div class="section__head-right">
-        <p class="section__desc" style="color:rgba(255,255,255,0.68);" data-t="map_desc">Headquartered in Stockholm with active projects in Sweden and Denmark, completed builds across 7 countries, and a branch office in Norway — we're on the ground wherever the work is.</p>
-      </div>
+<div class="section__inner" style="position:relative;z-index:1;">
+  <div class="section__head" style="margin-bottom:36px;">
+    <div class="section__head-left">
+      <span class="eyebrow" style="color:var(--cyan);" data-t="map_eyebrow">Where We Work</span>
+      <h2 class="section__title" style="color:#fff;" data-t="map_title">Building Europe's data infrastructure.</h2>
     </div>
-
-    <!-- Map + Sidebar -->
-    <div class="rg-map" style="align-items:stretch;">
-
-      <!-- ══ MAP PANEL ══ -->
-      <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.07);box-shadow:0 32px 90px rgba(0,0,0,0.6);">
-
-        <!-- toolbar -->
-        <div style="position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(4,10,24,0.85);backdrop-filter:blur(12px);flex-wrap:wrap;gap:8px;">
-          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-            <div style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:#FFD700;box-shadow:0 0 8px rgba(255,215,0,0.9);display:inline-block;flex-shrink:0;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.52);text-transform:uppercase;letter-spacing:0.07em;">HQ</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,0.9);display:inline-block;flex-shrink:0;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.52);text-transform:uppercase;letter-spacing:0.07em;">Active</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;border:2px solid rgba(255,255,255,0.45);display:inline-block;flex-shrink:0;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.52);text-transform:uppercase;letter-spacing:0.07em;">Completed</span></div>
-            <div style="display:flex;align-items:center;gap:6px;"><span style="width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px rgba(16,52,166,0.8);display:inline-block;flex-shrink:0;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.52);text-transform:uppercase;letter-spacing:0.07em;">Office</span></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:7px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.28);border-radius:20px;padding:5px 13px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:#4ade80;animation:mblink 2s infinite;display:inline-block;"></span>
-            <span style="font-family:var(--mono);font-size:10px;color:#4ade80;font-weight:700;letter-spacing:0.07em;">LIVE</span>
-          </div>
-        </div>
-
-        <!-- Realistic SVG Map -->
-        <svg id="europemap" viewBox="80 20 560 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;background:linear-gradient(175deg,#0a1628 0%,#060e1c 100%);" aria-label="Diginext project locations across Europe">
-          <defs>
-            <style>
-              .lc{fill:#1a3060;stroke:rgba(255,255,255,0.13);stroke-width:0.6;transition:fill .2s;cursor:pointer;}
-              .lc:hover{fill:#223d78;}
-              .ln{fill:#0f1e38;stroke:rgba(255,255,255,0.08);stroke-width:0.5;}
-              .r1{animation:rp 2.6s ease-out infinite;transform-origin:center;transform-box:fill-box;}
-              .r2{animation:rp 2.6s ease-out infinite .9s;transform-origin:center;transform-box:fill-box;}
-              .r3{animation:rp 2.6s ease-out infinite 1.8s;transform-origin:center;transform-box:fill-box;}
-              @keyframes rp{0%{r:4;opacity:.95;}100%{r:22;opacity:0;}}
-              .hq-float{animation:hqf 3.2s ease-in-out infinite;}
-              @keyframes hqf{0%,100%{transform:translateY(0);}50%{transform:translateY(-3px);}}
-              .db{animation:db 2s ease-in-out infinite alternate;}
-              @keyframes db{0%{opacity:.7;}100%{opacity:1;}}
-              .ca{stroke-dasharray:5 4;animation:cflow 2.5s linear infinite;}
-              .cc{stroke-dasharray:5 4;animation:cflow 3.5s linear infinite;}
-              @keyframes cflow{to{stroke-dashoffset:-40;}}
-              @keyframes mblink{0%,100%{opacity:1;}50%{opacity:.3;}}
-            </style>
-            <filter id="pg" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <filter id="hg" x="-120%" y="-120%" width="340%" height="340%">
-              <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <filter id="sg" x="-60%" y="-60%" width="220%" height="220%">
-              <feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <radialGradient id="sea" cx="50%" cy="40%" r="70%">
-              <stop offset="0%" stop-color="#0c1b38"/>
-              <stop offset="100%" stop-color="#050b18"/>
-            </radialGradient>
-          </defs>
-
-          <!-- Ocean base -->
-          <rect x="80" y="20" width="560" height="460" fill="url(#sea)"/>
-
-          <!-- ── REALISTIC COUNTRY SHAPES ──────────────────────── -->
-
-          <!-- Norway – realistic west coast with fjords approximation -->
-          <path class="lc" onclick="msp('norway')"
-            d="M224,42 L230,38 L240,35 L252,33 L265,35 L274,40 L280,48 L285,58 L284,68 L280,76 L282,86 L279,96
-               L284,106 L283,116 L278,126 L276,136 L272,146 L268,154 L264,162 L258,170 L250,166 L244,158
-               L240,148 L242,138 L238,128 L236,118 L238,108 L234,98 L232,88 L228,78 L224,68 L220,58 L222,48 Z"
-            fill="#12305a"/>
-          <!-- Norway upper peninsula -->
-          <path class="lc" onclick="msp('norway')"
-            d="M252,33 L265,28 L278,26 L288,30 L294,40 L292,50 L285,58 L280,48 L274,40 L265,35 Z"
-            fill="#12305a"/>
-
-          <!-- Sweden – more realistic shape -->
-          <path class="lc" onclick="msp('sweden')"
-            d="M284,38 L298,34 L314,33 L330,36 L344,42 L354,52 L360,64 L364,76 L366,90 L365,104
-               L362,118 L360,132 L356,146 L350,158 L344,168 L336,176 L326,180 L316,178 L308,172
-               L300,164 L294,154 L290,144 L288,134 L286,124 L284,114 L284,104 L286,94 L284,84
-               L282,74 L282,64 L284,54 L284,44 Z"
-            fill="#122e58"/>
-
-          <!-- Finland -->
-          <path class="lc" onclick="msp('finland')"
-            d="M368,34 L382,30 L396,30 L410,36 L420,46 L426,58 L428,72 L424,86 L418,100 L412,114
-               L406,128 L398,140 L390,150 L380,154 L370,150 L364,140 L364,130 L366,120 L364,110
-               L364,100 L366,90 L364,80 L366,70 L366,60 L368,50 L368,40 Z"
-            fill="#102850"/>
-
-          <!-- Denmark – Jutland -->
-          <path class="lc" onclick="msp('denmark')"
-            d="M276,174 L288,170 L298,176 L298,188 L290,196 L278,196 L270,188 L272,178 Z"
-            fill="#122e58"/>
-          <!-- Denmark – Sjælland island -->
-          <ellipse class="lc" onclick="msp('denmark')" cx="302" cy="192" rx="10" ry="7" fill="#122e58"/>
-          <!-- Funen island -->
-          <ellipse class="lc" onclick="msp('denmark')" cx="286" cy="196" rx="6" ry="4" fill="#122e58"/>
-
-          <!-- England / UK -->
-          <path class="lc" onclick="msp('uk')"
-            d="M142,142 L158,136 L174,136 L186,142 L192,154 L190,168 L180,178 L166,182 L152,180
-               L142,172 L138,160 L140,150 Z"
-            fill="#102648"/>
-          <!-- Scotland upper part -->
-          <path class="ln"
-            d="M150,136 L158,128 L168,122 L178,124 L184,132 L180,140 L170,144 L158,142 L150,136 Z"
-            fill="#0d2040"/>
-          <!-- Wales / SW -->
-          <path class="ln"
-            d="M148,174 L158,170 L164,178 L158,186 L148,184 L144,176 Z"
-            fill="#0d2040"/>
-
-          <!-- Ireland -->
-          <path class="ln"
-            d="M118,152 L130,146 L138,152 L136,164 L128,170 L118,168 L114,160 Z"
-            fill="#0d2040"/>
-
-          <!-- Germany -->
-          <path class="ln"
-            d="M248,218 L274,212 L302,214 L322,220 L336,232 L336,248 L324,260 L304,266 L282,266
-               L260,260 L246,248 L244,234 L248,222 Z"
-            fill="#0e2040"/>
-
-          <!-- Poland -->
-          <path class="lc" onclick="msp('poland')"
-            d="M338,230 L368,222 L398,224 L416,232 L422,244 L420,258 L408,268 L386,274 L360,274
-               L338,266 L326,256 L326,244 L332,236 Z"
-            fill="#122e58"/>
-
-          <!-- Netherlands / Belgium -->
-          <path class="ln"
-            d="M224,212 L244,208 L256,216 L252,232 L236,236 L222,228 L218,218 Z"
-            fill="#0d1e3a"/>
-
-          <!-- France -->
-          <path class="ln"
-            d="M174,228 L220,216 L244,234 L244,268 L220,296 L196,302 L170,288 L162,264 L166,244 L172,232 Z"
-            fill="#0c1c36"/>
-
-          <!-- Portugal -->
-          <path class="lc" onclick="msp('portugal')"
-            d="M126,300 L144,294 L154,304 L152,320 L142,328 L128,324 L122,312 L124,304 Z"
-            fill="#122e58"/>
-
-          <!-- Spain -->
-          <path class="ln"
-            d="M144,294 L196,280 L226,286 L236,308 L218,332 L186,342 L158,336 L142,320 L144,304 Z"
-            fill="#0c1c36"/>
-
-          <!-- Czech / Slovakia -->
-          <path class="ln"
-            d="M298,262 L334,254 L360,258 L364,274 L342,284 L308,284 L290,274 L292,264 Z"
-            fill="#0d1e38"/>
-
-          <!-- Austria / Switzerland -->
-          <path class="ln"
-            d="M250,260 L296,252 L310,262 L308,278 L282,284 L252,278 L240,268 L244,260 Z"
-            fill="#0c1c36"/>
-
-          <!-- Estonia -->
-          <path class="ln"
-            d="M376,144 L408,140 L424,148 L424,160 L408,166 L384,164 L374,156 L374,146 Z"
-            fill="#0e2040"/>
-
-          <!-- Latvia/Lithuania -->
-          <path class="ln"
-            d="M370,164 L420,160 L430,170 L428,186 L404,194 L374,190 L366,180 L368,168 Z"
-            fill="#0c1c34"/>
-
-          <!-- ── ACTIVE CONNECTION LINES FROM HQ ───────────────── -->
-          <!-- Stockholm HQ → Gävle active -->
-          <line x1="328" y1="154" x2="334" y2="140" stroke="#22c55e" stroke-width="1.2" class="ca"/>
-          <!-- Stockholm HQ → Sandviken active -->
-          <line x1="328" y1="154" x2="326" y2="142" stroke="#22c55e" stroke-width="1" class="ca" style="animation-delay:.5s"/>
-          <!-- Stockholm HQ → Copenhagen active -->
-          <path d="M328 154 Q302 168 296 188" stroke="#22c55e" stroke-width="1.1" fill="none" class="ca" style="animation-delay:1s"/>
-          <!-- HQ → Oslo (office) -->
-          <path d="M328 154 Q296 142 270 146" stroke="rgba(80,140,255,.65)" stroke-width="1" fill="none" class="cc" style="animation-delay:.4s"/>
-          <!-- Completed connections (dim) -->
-          <line x1="328" y1="154" x2="320" y2="170" stroke="rgba(255,255,255,.14)" stroke-width=".7" class="cc" style="animation-delay:.8s"/>
-          <line x1="328" y1="154" x2="316" y2="122" stroke="rgba(255,255,255,.12)" stroke-width=".7" class="cc" style="animation-delay:1.4s"/>
-          <path d="M328 154 Q255 152 261 145" stroke="rgba(255,255,255,.11)" stroke-width=".7" fill="none" class="cc" style="animation-delay:2s"/>
-          <line x1="328" y1="154" x2="376" y2="244" stroke="rgba(255,255,255,.12)" stroke-width=".7" class="cc" style="animation-delay:.6s"/>
-          <line x1="328" y1="154" x2="166" y2="155" stroke="rgba(255,255,255,.1)" stroke-width=".7" class="cc" style="animation-delay:2.4s"/>
-          <path d="M328 154 Q230 234 133 310" stroke="rgba(255,255,255,.08)" stroke-width=".7" fill="none" class="cc" style="animation-delay:3s"/>
-          <line x1="328" y1="154" x2="400" y2="144" stroke="rgba(255,255,255,.1)" stroke-width=".7" class="cc" style="animation-delay:1.8s"/>
-
-          <!-- ══ MARKERS ══ -->
-
-          <!-- ★ HQ Stockholm -->
-          <g onclick="msp('sweden')" style="cursor:pointer;" class="hq-float">
-            <circle cx="328" cy="154" r="22" fill="rgba(255,215,0,.04)" filter="url(#hg)"/>
-            <circle cx="328" cy="154" r="14" fill="rgba(255,215,0,.08)"/>
-            <circle cx="328" cy="154" r="5" fill="rgba(255,215,0,.18)" class="r1"/>
-            <circle cx="328" cy="154" r="5" fill="rgba(255,215,0,.18)" class="r2"/>
-            <circle cx="328" cy="154" r="11" fill="rgba(255,215,0,.22)" stroke="#FFD700" stroke-width="1.8"/>
-            <circle cx="328" cy="154" r="5.5" fill="#FFD700" filter="url(#sg)"/>
-            <text x="328" y="143" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7.5" font-weight="700" fill="#FFD700" filter="url(#sg)">HQ</text>
-          </g>
-
-          <!-- ● Active: Gävle -->
-          <g onclick="msp('sweden')" style="cursor:pointer;">
-            <circle cx="334" cy="140" r="4" fill="rgba(34,197,94,.15)" class="r1" style="animation-delay:.35s"/>
-            <circle cx="334" cy="140" r="4" fill="rgba(34,197,94,.15)" class="r2" style="animation-delay:1.25s"/>
-            <circle cx="334" cy="140" r="7" fill="rgba(34,197,94,.2)" filter="url(#pg)"/>
-            <circle cx="334" cy="140" r="4.5" fill="#22c55e" class="db"/>
-            <circle cx="334" cy="140" r="2" fill="#fff"/>
-          </g>
-
-          <!-- ● Active: Sandviken -->
-          <g onclick="msp('sweden')" style="cursor:pointer;">
-            <circle cx="323" cy="142" r="4" fill="rgba(34,197,94,.15)" class="r1" style="animation-delay:.75s"/>
-            <circle cx="323" cy="142" r="7" fill="rgba(34,197,94,.18)" filter="url(#pg)"/>
-            <circle cx="323" cy="142" r="4" fill="#22c55e" class="db" style="animation-delay:.5s"/>
-            <circle cx="323" cy="142" r="1.8" fill="#fff"/>
-          </g>
-
-          <!-- ● Active: Copenhagen -->
-          <g onclick="msp('denmark')" style="cursor:pointer;">
-            <circle cx="296" cy="188" r="4" fill="rgba(34,197,94,.15)" class="r1" style="animation-delay:.9s"/>
-            <circle cx="296" cy="188" r="4" fill="rgba(34,197,94,.15)" class="r2" style="animation-delay:1.8s"/>
-            <circle cx="296" cy="188" r="8" fill="rgba(34,197,94,.22)" filter="url(#pg)"/>
-            <circle cx="296" cy="188" r="5" fill="#22c55e" class="db" style="animation-delay:.4s"/>
-            <circle cx="296" cy="188" r="2.2" fill="#fff"/>
-          </g>
-
-          <!-- ◎ Office: Oslo -->
-          <g onclick="msp('norway')" style="cursor:pointer;">
-            <circle cx="270" cy="146" r="8" fill="rgba(16,52,166,.2)" filter="url(#pg)"/>
-            <circle cx="270" cy="146" r="5.5" fill="var(--cyan)" class="db" style="animation-delay:.6s"/>
-            <circle cx="270" cy="146" r="2.3" fill="#fff"/>
-            <circle cx="270" cy="146" r="10" fill="none" stroke="var(--cyan)" stroke-width="1.2" stroke-dasharray="2.5 2" opacity=".6"/>
-          </g>
-
-          <!-- ○ Completed: Malmö (south Sweden) -->
-          <g onclick="msp('sweden')" style="cursor:pointer;"><circle cx="312" cy="172" r="5.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/><circle cx="312" cy="172" r="2.3" fill="rgba(255,255,255,.65)"/></g>
-          <!-- ○ Completed: Falun -->
-          <g onclick="msp('sweden')" style="cursor:pointer;"><circle cx="320" cy="126" r="5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.42)" stroke-width="1.4"/><circle cx="320" cy="126" r="2" fill="rgba(255,255,255,.62)"/></g>
-
-          <!-- ○ Completed Norwegian cities -->
-          <!-- Hamar -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="278" cy="130" r="4.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/><circle cx="278" cy="130" r="1.8" fill="rgba(255,255,255,.6)"/></g>
-          <!-- Kristiansand -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="254" cy="152" r="4.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/><circle cx="254" cy="152" r="1.8" fill="rgba(255,255,255,.6)"/></g>
-          <!-- Glomfjord (north, on coast) -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="238" cy="86" r="4" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.38)" stroke-width="1.2"/><circle cx="238" cy="86" r="1.6" fill="rgba(255,255,255,.58)"/></g>
-          <!-- Slependen (near Oslo) -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="264" cy="152" r="4" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.38)" stroke-width="1.2"/><circle cx="264" cy="152" r="1.6" fill="rgba(255,255,255,.58)"/></g>
-          <!-- Trondheim -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="248" cy="100" r="4.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/><circle cx="248" cy="100" r="1.8" fill="rgba(255,255,255,.6)"/></g>
-          <!-- Stavanger (SW coast) -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="240" cy="148" r="4.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/><circle cx="240" cy="148" r="1.8" fill="rgba(255,255,255,.6)"/></g>
-          <!-- Bodø (far north) -->
-          <g onclick="msp('norway')" style="cursor:pointer;"><circle cx="236" cy="60" r="4" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.38)" stroke-width="1.2"/><circle cx="236" cy="60" r="1.6" fill="rgba(255,255,255,.58)"/></g>
-
-          <!-- ○ Completed: Helsinki -->
-          <g onclick="msp('finland')" style="cursor:pointer;"><circle cx="400" cy="144" r="5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.42)" stroke-width="1.4"/><circle cx="400" cy="144" r="2" fill="rgba(255,255,255,.62)"/></g>
-          <!-- ○ Completed: Warsaw -->
-          <g onclick="msp('poland')" style="cursor:pointer;"><circle cx="368" cy="242" r="5.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/><circle cx="368" cy="242" r="2.3" fill="rgba(255,255,255,.65)"/></g>
-          <!-- ○ Completed: Poznań -->
-          <g onclick="msp('poland')" style="cursor:pointer;"><circle cx="352" cy="236" r="4.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.4)" stroke-width="1.3"/><circle cx="352" cy="236" r="1.8" fill="rgba(255,255,255,.6)"/></g>
-          <!-- ○ Completed: Slough (England, west of London) -->
-          <g onclick="msp('uk')" style="cursor:pointer;"><circle cx="166" cy="155" r="5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.42)" stroke-width="1.4"/><circle cx="166" cy="155" r="2" fill="rgba(255,255,255,.62)"/></g>
-          <!-- ○ Completed: Lisbon -->
-          <g onclick="msp('portugal')" style="cursor:pointer;"><circle cx="133" cy="310" r="5.5" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/><circle cx="133" cy="310" r="2.3" fill="rgba(255,255,255,.65)"/></g>
-
-          <!-- ── CITY LABELS ── -->
-          <text x="340" y="151" font-family="'Montserrat',sans-serif" font-size="8" font-weight="700" fill="#FFD700" filter="url(#sg)">Stockholm</text>
-          <text x="342" y="140" font-family="'Montserrat',sans-serif" font-size="7" font-weight="600" fill="#86efac">Gävle</text>
-          <text x="309" y="140" font-family="'Montserrat',sans-serif" font-size="7" font-weight="600" fill="#86efac">Sandviken</text>
-          <text x="303" y="185" font-family="'Montserrat',sans-serif" font-size="7" font-weight="600" fill="#86efac">Copenhagen</text>
-          <text x="255" y="143" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(100,165,255,.85)">Oslo</text>
-          <text x="296" y="170" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.4)">Malmö</text>
-          <text x="304" y="123" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.4)">Falun</text>
-          <text x="283" y="127" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.38)">Hamar</text>
-          <text x="228" y="150" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Kristiansand</text>
-          <text x="220" y="84" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Glomfjord</text>
-          <text x="248" y="150" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Slependen</text>
-          <text x="234" y="97" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Trondheim</text>
-          <text x="224" y="146" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Stavanger</text>
-          <text x="220" y="58" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.34)">Bodø</text>
-          <text x="406" y="141" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.38)">Helsinki</text>
-          <text x="373" y="239" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.38)">Warsaw</text>
-          <text x="337" y="234" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.36)">Poznań</text>
-          <text x="149" y="153" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.38)">Slough</text>
-          <text x="112" y="308" font-family="'Montserrat',sans-serif" font-size="6.5" fill="rgba(255,255,255,.38)">Lisbon</text>
-
-          <!-- Country watermarks -->
-          <text x="322" y="96" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="8.5" font-weight="700" fill="rgba(255,255,255,.07)" letter-spacing="3">SWEDEN</text>
-          <text x="258" y="88" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7.5" font-weight="700" fill="rgba(255,255,255,.06)" letter-spacing="2">NORWAY</text>
-          <text x="396" y="94" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7.5" font-weight="700" fill="rgba(255,255,255,.06)" letter-spacing="2">FINLAND</text>
-          <text x="380" y="250" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7.5" font-weight="700" fill="rgba(255,255,255,.06)" letter-spacing="2">POLAND</text>
-          <text x="162" y="164" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,.06)" letter-spacing="1">UK</text>
-          <text x="128" y="318" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,.06)" letter-spacing="1">PT</text>
-          <text x="294" y="210" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="7" font-weight="700" fill="rgba(255,255,255,.05)" letter-spacing="1">DK</text>
-        </svg>
-      </div>
-
-      <!-- ══ SIDEBAR ══ -->
-      <div style="display:flex;flex-direction:column;gap:12px;">
-
-        <!-- Filter tabs -->
-        <div style="display:flex;gap:2px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:4px;">
-          <button onclick="mtab(this,'all')" class="mtab mtab-on" style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:rgba(255,255,255,0.11);color:#fff;">All</button>
-          <button onclick="mtab(this,'active')" class="mtab" style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.42);">Active</button>
-          <button onclick="mtab(this,'completed')" class="mtab" style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.42);">Done</button>
-          <button onclick="mtab(this,'office')" class="mtab" style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.42);">Offices</button>
-        </div>
-
-        <!-- Location list -->
-        <div id="mlist" style="display:flex;flex-direction:column;gap:5px;max-height:330px;overflow-y:auto;padding-right:3px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.12) transparent;">
-
-          <!-- HQ -->
-          <div class="mrow" data-t="hq" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.22);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,215,0,0.12)'" onmouseleave="this.style.background='rgba(255,215,0,0.06)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;">⭐</div>
-            <div style="flex:1;min-width:0;"><div style="font-size:12.5px;font-weight:700;color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Stockholm, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Headquarters</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#FFD700;background:rgba(255,215,0,0.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">HQ</span>
-          </div>
-
-          <!-- Active -->
-          <div class="mrow" data-t="active" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,0.12)'" onmouseleave="this.style.background='rgba(34,197,94,0.06)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:mblink 2s infinite;display:inline-block;"></span></div>
-            <div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Stockholm, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,0.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span>
-          </div>
-          <div class="mrow" data-t="active" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,0.12)'" onmouseleave="this.style.background='rgba(34,197,94,0.06)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:mblink 2s infinite .4s;display:inline-block;"></span></div>
-            <div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Gävle, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,0.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span>
-          </div>
-          <div class="mrow" data-t="active" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,0.12)'" onmouseleave="this.style.background='rgba(34,197,94,0.06)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:mblink 2s infinite .8s;display:inline-block;"></span></div>
-            <div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Sandviken, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,0.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span>
-          </div>
-          <div class="mrow" data-t="active" onclick="msp('denmark')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,0.12)'" onmouseleave="this.style.background='rgba(34,197,94,0.06)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:mblink 2s infinite 1.2s;display:inline-block;"></span></div>
-            <div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Copenhagen, Denmark</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,0.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span>
-          </div>
-
-          <!-- Office -->
-          <div class="mrow" data-t="office" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(16,52,166,0.08);border:1px solid rgba(16,52,166,0.28);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(16,52,166,0.16)'" onmouseleave="this.style.background='rgba(16,52,166,0.08)'">
-            <div style="width:30px;height:30px;border-radius:8px;background:rgba(16,52,166,0.2);border:1px solid rgba(16,52,166,0.38);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🏢</div>
-            <div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Oslo, Norway</div><div style="font-size:9px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Branch Office · Diginext IT Solutions Norway NUF</div></div>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:var(--cyan);background:rgba(16,52,166,0.14);padding:2px 7px;border-radius:4px;flex-shrink:0;">OFFICE</span>
-          </div>
-
-          <!-- Completed header -->
-          <div class="mrow" data-t="completed" style="padding:5px 2px 1px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.24);text-transform:uppercase;letter-spacing:.1em;">Completed Projects</div>
-
-          <!-- Sweden completed -->
-          <div class="mrow" data-t="completed" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Malmö, Sweden</div><span style="font-size:11px;">🇸🇪</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('sweden')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Falun, Sweden</div><span style="font-size:11px;">🇸🇪</span></div>
-
-          <!-- Norway completed -->
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Oslo, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Hamar, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Kristiansand, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Glomfjord, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Slependen, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Trondheim, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Stavanger, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('norway')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Bodø, Norway</div><span style="font-size:11px;">🇳🇴</span></div>
-
-          <!-- Other countries -->
-          <div class="mrow" data-t="completed" onclick="msp('finland')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Helsinki, Finland</div><span style="font-size:11px;">🇫🇮</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('poland')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Warsaw, Poland</div><span style="font-size:11px;">🇵🇱</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('poland')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Poznań, Poland</div><span style="font-size:11px;">🇵🇱</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('uk')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Slough, England</div><span style="font-size:11px;">🇬🇧</span></div>
-          <div class="mrow" data-t="completed" onclick="msp('portugal')" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.36);border:1.4px solid rgba(255,255,255,.58);"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Lisbon, Portugal</div><span style="font-size:11px;">🇵🇹</span></div>
-        </div>
-
-        <!-- Country detail panel -->
-        <div id="mpanel" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px;min-height:82px;transition:all .3s;">
-          <div id="mp-default"><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;">Select a location</div><p style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6;margin:0;">Click any pin on the map or a row in the list to view project details.</p></div>
-          <div id="mp-sweden" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;"><span style="font-size:19px;">🇸🇪</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Sweden</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#FFD700;text-transform:uppercase;letter-spacing:.1em;">HQ · 3 Active · 2 Completed</div></div></div>
-            <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:11px;">
-              <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.88);"><span style="color:#FFD700;flex-shrink:0;">★</span><span><strong style="color:#fff;">Stockholm</strong> — Headquarters + Active Project</span></div>
-              <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.88);"><span style="color:#4ade80;flex-shrink:0;">●</span><span><strong style="color:#fff;">Gävle</strong> — Active Project</span></div>
-              <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.88);"><span style="color:#4ade80;flex-shrink:0;">●</span><span><strong style="color:#fff;">Sandviken</strong> — Active Project</span></div>
-              <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.5);"><span style="color:rgba(255,255,255,.3);flex-shrink:0;">○</span><span>Malmö, Falun — Completed</span></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
-              <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px;text-align:center;"><div style="font-size:17px;font-weight:800;color:#4ade80;font-family:'Montserrat',sans-serif;">3</div><div style="font-size:9px;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-top:1px;">Active</div></div>
-              <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px;text-align:center;"><div style="font-size:17px;font-weight:800;color:rgba(255,255,255,.55);font-family:'Montserrat',sans-serif;">2</div><div style="font-size:9px;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-top:1px;">Done</div></div>
-            </div>
-          </div>
-          <div id="mp-norway" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;"><span style="font-size:19px;">🇳🇴</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Norway</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;">Branch Office · 8 Completed</div></div></div>
-            <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:11px;">
-              <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.88);"><span style="color:var(--cyan);flex-shrink:0;">◈</span><span><strong style="color:#fff;">Oslo</strong> — Branch Office (Diginext IT Solutions Norway NUF)</span></div>
-              <div style="display:flex;gap:7px;font-size:11px;color:rgba(255,255,255,.5);"><span style="color:rgba(255,255,255,.28);flex-shrink:0;">○</span><span>Oslo · Hamar · Kristiansand · Glomfjord · Slependen · Trondheim · Stavanger · Bodø</span></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
-              <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px;text-align:center;"><div style="font-size:17px;font-weight:800;color:var(--cyan);font-family:'Montserrat',sans-serif;">1</div><div style="font-size:9px;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-top:1px;">Office</div></div>
-              <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px;text-align:center;"><div style="font-size:17px;font-weight:800;color:rgba(255,255,255,.55);font-family:'Montserrat',sans-serif;">8</div><div style="font-size:9px;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-top:1px;">Done</div></div>
-            </div>
-          </div>
-          <div id="mp-denmark" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;"><span style="font-size:19px;">🇩🇰</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Denmark</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#4ade80;text-transform:uppercase;letter-spacing:.1em;">Active Project</div></div></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.88);margin-bottom:10px;"><span style="color:#4ade80;flex-shrink:0;">●</span><span><strong style="color:#fff;">Copenhagen</strong> — Active infrastructure project</span></div>
-            <div style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:8px;padding:9px;text-align:center;"><div style="font-size:17px;font-weight:800;color:#4ade80;font-family:'Montserrat',sans-serif;">1</div><div style="font-size:9px;color:rgba(255,255,255,.35);font-family:'JetBrains Mono',monospace;text-transform:uppercase;margin-top:1px;">Active</div></div>
-          </div>
-          <div id="mp-finland" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;"><span style="font-size:19px;">🇫🇮</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Finland</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.1em;">Completed</div></div></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.6);"><span style="color:rgba(255,255,255,.3);">○</span><span>Helsinki — Completed cabling and infrastructure project</span></div>
-          </div>
-          <div id="mp-poland" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;"><span style="font-size:19px;">🇵🇱</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Poland</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.1em;">2 Completed</div></div></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.6);margin-bottom:6px;"><span style="color:rgba(255,255,255,.3);">○</span><span>Warsaw — Multi-phase cloud region deployment</span></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.6);"><span style="color:rgba(255,255,255,.3);">○</span><span>Poznań — Completed infrastructure project</span></div>
-          </div>
-          <div id="mp-uk" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;"><span style="font-size:19px;">🇬🇧</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">England</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.1em;">Completed</div></div></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.6);"><span style="color:rgba(255,255,255,.3);">○</span><span>Slough — Completed structured cabling installation</span></div>
-          </div>
-          <div id="mp-portugal" class="mpd" style="display:none;animation:mfade .3s ease;">
-            <div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;"><span style="font-size:19px;">🇵🇹</span><div><div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#fff;">Portugal</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.1em;">Completed</div></div></div>
-            <div style="display:flex;gap:7px;font-size:11.5px;color:rgba(255,255,255,.6);"><span style="color:rgba(255,255,255,.3);">○</span><span>Lisbon — Completed data centre cabling and installation</span></div>
-          </div>
-        </div>
-
-        <!-- Stats -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:var(--cyan);" data-t="map_stat1v">7</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.38);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;" data-t="map_stat1">Countries</div></div>
-          <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:#4ade80;">4</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.38);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;" data-t="map_stat2">Live Projects</div></div>
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:rgba(255,255,255,.62);">19</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.38);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;">Project Sites</div></div>
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:21px;font-weight:800;color:var(--cyan);">&lt;2h</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.38);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;" data-t="map_stat4">Response</div></div>
-        </div>
-
-        <a href="contact.html" class="btn btn--accent" style="text-align:center;justify-content:center;width:100%;" data-t="map_cta">Start a Project in Your Region →</a>
-      </div>
+    <div class="section__head-right">
+      <p class="section__desc" style="color:rgba(255,255,255,.68);" data-t="map_desc">Headquartered in Stockholm with active projects in Sweden and Denmark, completed builds across 7 countries, and a branch office in Norway.</p>
     </div>
   </div>
+
+  <!-- Legend -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);border-radius:11px;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+    <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:7px;"><span style="width:13px;height:13px;border-radius:50%;background:#FFD700;box-shadow:0 0 8px rgba(255,215,0,.9);flex-shrink:0;display:inline-block;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;">HQ</span></span>
+      <span style="display:flex;align-items:center;gap:7px;"><span style="width:13px;height:13px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,.9);flex-shrink:0;display:inline-block;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;">Active</span></span>
+      <span style="display:flex;align-items:center;gap:7px;"><span style="width:13px;height:13px;border-radius:50%;background:#64748b;border:2px solid rgba(255,255,255,.3);flex-shrink:0;display:inline-block;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;">Completed</span></span>
+      <span style="display:flex;align-items:center;gap:7px;"><span style="width:13px;height:13px;border-radius:50%;background:#1034A6;box-shadow:0 0 8px rgba(16,52,166,.7);flex-shrink:0;display:inline-block;"></span><span style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.07em;">Office</span></span>
+    </div>
+    <span style="display:flex;align-items:center;gap:7px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);border-radius:20px;padding:5px 13px;"><span style="width:6px;height:6px;border-radius:50%;background:#4ade80;animation:livepulse 2s infinite;display:inline-block;"></span><span style="font-family:var(--mono);font-size:10px;color:#4ade80;font-weight:700;letter-spacing:.07em;">LIVE</span></span>
+  </div>
+
+  <div class="rg-map" style="align-items:stretch;">
+
+    <!-- D3 MAP -->
+    <div id="mapWrap" style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 80px rgba(0,0,0,.6);background:#07111f;">
+      <svg id="dnmap" style="display:block;width:100%;"></svg>
+      <div id="maptip" style="position:absolute;display:none;background:rgba(7,14,32,.96);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:10px 14px;pointer-events:none;z-index:20;min-width:155px;white-space:nowrap;">
+        <div id="tip-city" style="font-size:13px;font-weight:700;color:#fff;font-family:'Montserrat',sans-serif;"></div>
+        <div id="tip-type" style="font-family:'JetBrains Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.09em;font-weight:600;margin-top:2px;"></div>
+        <div id="tip-note" style="font-size:10.5px;color:rgba(255,255,255,.42);margin-top:4px;line-height:1.5;"></div>
+      </div>
+      <div id="maploader" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#07111f;z-index:5;">
+        <div style="width:36px;height:36px;border:3px solid rgba(16,52,166,.3);border-top-color:#1034A6;border-radius:50%;animation:mapspin .8s linear infinite;margin-bottom:14px;"></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;">Loading map…</div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;gap:2px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:4px;">
+        <button onclick="mapTab(this,'all')"       class="mtab mtab-on" style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:rgba(255,255,255,.13);color:#fff;transition:all .18s;">All</button>
+        <button onclick="mapTab(this,'active')"    class="mtab"         style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.4);transition:all .18s;">Active</button>
+        <button onclick="mapTab(this,'completed')" class="mtab"         style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.4);transition:all .18s;">Done</button>
+        <button onclick="mapTab(this,'office')"    class="mtab"         style="flex:1;padding:8px 4px;border:none;border-radius:7px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:transparent;color:rgba(255,255,255,.4);transition:all .18s;">Offices</button>
+      </div>
+
+      <div id="mlist" style="display:flex;flex-direction:column;gap:5px;max-height:298px;overflow-y:auto;padding-right:3px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.12) transparent;">
+        <div class="mrow" data-t="hq" onclick="flyTo(0)" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.22);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,215,0,.14)'" onmouseleave="this.style.background='rgba(255,215,0,.06)'">
+          <div style="width:30px;height:30px;border-radius:8px;background:rgba(255,215,0,.16);border:1px solid rgba(255,215,0,.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;">⭐</div>
+          <div style="flex:1;min-width:0;"><div style="font-size:12.5px;font-weight:700;color:#FFD700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Stockholm, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Headquarters</div></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#FFD700;background:rgba(255,215,0,.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">HQ</span>
+        </div>
+        <div class="mrow" data-t="active" onclick="flyTo(1)" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,.13)'" onmouseleave="this.style.background='rgba(34,197,94,.06)'"><div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,.16);border:1px solid rgba(34,197,94,.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#22c55e;animation:livepulse 2s infinite;display:inline-block;"></span></div><div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Gävle, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div><span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span></div>
+        <div class="mrow" data-t="active" onclick="flyTo(2)" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,.13)'" onmouseleave="this.style.background='rgba(34,197,94,.06)'"><div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,.16);border:1px solid rgba(34,197,94,.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#22c55e;animation:livepulse 2s .4s infinite;display:inline-block;"></span></div><div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Sandviken, Sweden</div><div style="font-size:9px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div><span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span></div>
+        <div class="mrow" data-t="active" onclick="flyTo(3)" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(34,197,94,.13)'" onmouseleave="this.style.background='rgba(34,197,94,.06)'"><div style="width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,.16);border:1px solid rgba(34,197,94,.32);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#22c55e;animation:livepulse 2s .8s infinite;display:inline-block;"></span></div><div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Copenhagen, Denmark</div><div style="font-size:9px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Active Project</div></div><span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#4ade80;background:rgba(34,197,94,.1);padding:2px 7px;border-radius:4px;flex-shrink:0;">LIVE</span></div>
+        <div class="mrow" data-t="office" onclick="flyTo(4)" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:rgba(16,52,166,.08);border:1px solid rgba(16,52,166,.28);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(16,52,166,.16)'" onmouseleave="this.style.background='rgba(16,52,166,.08)'"><div style="width:30px;height:30px;border-radius:8px;background:rgba(16,52,166,.2);border:1px solid rgba(16,52,166,.38);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;">🏢</div><div style="flex:1;"><div style="font-size:12.5px;font-weight:700;color:#fff;">Oslo, Norway</div><div style="font-size:9px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-top:1px;">Branch Office · Diginext IT Solutions Norway NUF</div></div><span style="font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;color:#1034A6;background:rgba(16,52,166,.14);padding:2px 7px;border-radius:4px;flex-shrink:0;">OFFICE</span></div>
+        <div class="mrow" data-t="completed" style="padding:5px 2px 1px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:.1em;">Completed Projects</div>
+        <div class="mrow" data-t="completed" onclick="flyTo(5)"  style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Malmö, Sweden</div><span>🇸🇪</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(6)"  style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Falun, Sweden</div><span>🇸🇪</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(7)"  style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Hamar, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(8)"  style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Kristiansand, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(9)"  style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Glomfjord, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(10)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Slependen, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(11)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Trondheim, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(12)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Stavanger, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(13)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Bodø, Norway</div><span>🇳🇴</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(14)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Helsinki, Finland</div><span>🇫🇮</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(15)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Warsaw, Poland</div><span>🇵🇱</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(16)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Poznań, Poland</div><span>🇵🇱</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(17)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Slough, England</div><span>🇬🇧</span></div>
+        <div class="mrow" data-t="completed" onclick="flyTo(18)" style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);cursor:pointer;transition:background .18s;" onmouseenter="this.style.background='rgba(255,255,255,.08)'" onmouseleave="this.style.background='rgba(255,255,255,.03)'"><div style="width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:1.4px solid rgba(255,255,255,.55);display:inline-block;"></span></div><div style="flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,.65);">Lisbon, Portugal</div><span>🇵🇹</span></div>
+      </div>
+
+      <div id="map-detail" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:16px;min-height:80px;">
+        <div id="md-default"><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:rgba(255,255,255,.26);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;">Select a location</div><p style="font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.6;margin:0;">Click any dot on the map or a row in the list.</p></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);">7</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.36);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;">Countries</div></div>
+        <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.14);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:#4ade80;">4</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.36);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;">Live Projects</div></div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:rgba(255,255,255,.6);">19</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.36);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;">Project Sites</div></div>
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px;text-align:center;"><div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);">&lt;2h</div><div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.36);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;">Response</div></div>
+      </div>
+      <a href="contact.html" class="btn btn--accent" style="text-align:center;justify-content:center;width:100%;" data-t="map_cta">Start a Project in Your Region →</a>
+    </div>
+  </div>
+</div>
 </section>
 
 <style>
-.mtab-on{background:rgba(255,255,255,.12)!important;color:#fff!important;}
+@keyframes livepulse{0%,100%{opacity:1;}50%{opacity:.2;}}
+@keyframes mapspin{to{transform:rotate(360deg);}}
+@keyframes mfade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+.mtab-on{background:rgba(255,255,255,.13)!important;color:#fff!important;}
 #mlist::-webkit-scrollbar{width:3px;}
 #mlist::-webkit-scrollbar-track{background:transparent;}
 #mlist::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:3px;}
-@keyframes mfade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+#dnmap path.country{cursor:default;}
+#dnmap path.country-hi{cursor:pointer;transition:fill .2s;}
+#dnmap path.country-hi:hover{fill:#223d7a!important;}
 </style>
 
+<!-- D3 + TopoJSON from cdnjs — no integrity hash, no tracking prevention issues -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" crossorigin="anonymous"></script>
+
 <script>
-function msp(c){
-  document.querySelectorAll('.mpd').forEach(e=>e.style.display='none');
-  document.getElementById('mp-default').style.display='none';
-  const p=document.getElementById('mp-'+c);
-  if(p){p.style.display='block';p.style.animation='mfade .3s ease';}
+(function(){
+'use strict';
+
+var CITIES=[
+  {i:0, name:'Stockholm',    country:'Sweden',   lat:59.3293, lon:18.0686, type:'hq',    note:'Headquarters + Active Project'},
+  {i:1, name:'Gävle',        country:'Sweden',   lat:60.6749, lon:17.1416, type:'active', note:'Active Project'},
+  {i:2, name:'Sandviken',    country:'Sweden',   lat:60.6190, lon:16.7766, type:'active', note:'Active Project'},
+  {i:3, name:'Copenhagen',   country:'Denmark',  lat:55.6761, lon:12.5683, type:'active', note:'Active Project'},
+  {i:4, name:'Oslo',         country:'Norway',   lat:59.9139, lon:10.7522, type:'office', note:'Diginext IT Solutions Norway NUF'},
+  {i:5, name:'Malmö',        country:'Sweden',   lat:55.6050, lon:13.0038, type:'done',   note:'Completed'},
+  {i:6, name:'Falun',        country:'Sweden',   lat:60.6067, lon:15.6320, type:'done',   note:'Completed'},
+  {i:7, name:'Hamar',        country:'Norway',   lat:60.7945, lon:11.0680, type:'done',   note:'Completed'},
+  {i:8, name:'Kristiansand', country:'Norway',   lat:58.1467, lon:7.9956,  type:'done',   note:'Completed'},
+  {i:9, name:'Glomfjord',    country:'Norway',   lat:66.8208, lon:13.9733, type:'done',   note:'Completed'},
+  {i:10,name:'Slependen',    country:'Norway',   lat:59.9057, lon:10.5295, type:'done',   note:'Completed'},
+  {i:11,name:'Trondheim',    country:'Norway',   lat:63.4305, lon:10.3951, type:'done',   note:'Completed'},
+  {i:12,name:'Stavanger',    country:'Norway',   lat:58.9700, lon:5.7331,  type:'done',   note:'Completed'},
+  {i:13,name:'Bodø',         country:'Norway',   lat:67.2804, lon:14.4049, type:'done',   note:'Completed'},
+  {i:14,name:'Helsinki',     country:'Finland',  lat:60.1699, lon:24.9384, type:'done',   note:'Completed'},
+  {i:15,name:'Warsaw',       country:'Poland',   lat:52.2297, lon:21.0122, type:'done',   note:'Completed'},
+  {i:16,name:'Poznań',       country:'Poland',   lat:52.4064, lon:16.9252, type:'done',   note:'Completed'},
+  {i:17,name:'Slough',       country:'England',  lat:51.5105, lon:-0.5950, type:'done',   note:'Completed'},
+  {i:18,name:'Lisbon',       country:'Portugal', lat:38.7167, lon:-9.1333, type:'done',   note:'Completed'}
+];
+
+var DETAIL={
+  Sweden:{flag:'🇸🇪',badge:'HQ · 3 Active · 2 Completed',bc:'#FFD700',rows:[
+    {c:'#FFD700',t:'<b style="color:#fff">Stockholm</b> — HQ + Active Project'},
+    {c:'#4ade80',t:'<b style="color:#fff">Gävle</b> — Active Project'},
+    {c:'#4ade80',t:'<b style="color:#fff">Sandviken</b> — Active Project'},
+    {c:'rgba(255,255,255,.28)',t:'Malmö, Falun — Completed'}],
+    stats:[{v:'3',l:'Active',c:'#4ade80'},{v:'2',l:'Done',c:'rgba(255,255,255,.5)'}]},
+  Norway:{flag:'🇳🇴',badge:'Branch Office · 8 Completed',bc:'#60a5fa',rows:[
+    {c:'#60a5fa',t:'<b style="color:#fff">Oslo</b> — Diginext IT Solutions Norway NUF'},
+    {c:'rgba(255,255,255,.28)',t:'Oslo · Hamar · Kristiansand · Glomfjord · Slependen · Trondheim · Stavanger · Bodø'}],
+    stats:[{v:'1',l:'Office',c:'#60a5fa'},{v:'8',l:'Done',c:'rgba(255,255,255,.5)'}]},
+  Denmark:{flag:'🇩🇰',badge:'Active Project',bc:'#4ade80',rows:[{c:'#4ade80',t:'<b style="color:#fff">Copenhagen</b> — Active infrastructure project'}],stats:[{v:'1',l:'Active',c:'#4ade80'}]},
+  Finland:{flag:'🇫🇮',badge:'Completed',bc:'rgba(255,255,255,.4)',rows:[{c:'rgba(255,255,255,.28)',t:'Helsinki — Completed project'}],stats:[]},
+  Poland:{flag:'🇵🇱',badge:'2 Completed',bc:'rgba(255,255,255,.4)',rows:[{c:'rgba(255,255,255,.28)',t:'Warsaw — Cloud region build'},{c:'rgba(255,255,255,.28)',t:'Poznań — Infrastructure project'}],stats:[]},
+  England:{flag:'🇬🇧',badge:'Completed',bc:'rgba(255,255,255,.4)',rows:[{c:'rgba(255,255,255,.28)',t:'Slough — Structured cabling installation'}],stats:[]},
+  Portugal:{flag:'🇵🇹',badge:'Completed',bc:'rgba(255,255,255,.4)',rows:[{c:'rgba(255,255,255,.28)',t:'Lisbon — Data centre installation'}],stats:[]}
+};
+
+var FEATURED_ISO=['NOR','SWE','FIN','DNK','POL','PRT','GBR'];
+var EUROPE_ISO=['NOR','SWE','FIN','DNK','POL','PRT','GBR','DEU','FRA','ESP','NLD','BEL','CHE','AUT','ITA','CZE','SVK','HUN','ROU','BGR','HRV','SRB','GRC','UKR','BLR','EST','LVA','LTU','ISL','IRL','LUX','SVN','ALB','MKD','MNE','BIH','MDA','UNK'];
+
+var svg=d3.select('#dnmap');
+var wrap=document.getElementById('mapWrap');
+var W,H;
+var projection, pathGen;
+var pulseT=0, rafId;
+
+function getCountryName(props){
+  if(!props) return '';
+  return props.name||props.NAME||props.admin||props.ADMIN||'';
 }
-function mtab(btn,f){
-  document.querySelectorAll('.mtab').forEach(b=>{b.style.background='transparent';b.style.color='rgba(255,255,255,.42)';b.classList.remove('mtab-on');});
-  btn.style.background='rgba(255,255,255,.12)';btn.style.color='#fff';btn.classList.add('mtab-on');
-  document.querySelectorAll('.mrow').forEach(r=>{r.style.display=(f==='all'||r.dataset.t===f)?'':'none';});
+function getISO(props){
+  if(!props) return '';
+  return props.iso_a3||props.ISO_A3||props.adm0_a3||props.ADM0_A3||'';
 }
-function selectCountry(c){msp(c);}
+
+function showDetail(country){
+  var d=DETAIL[country]; if(!d) return;
+  var rows=d.rows.map(function(r){return'<div style="display:flex;gap:7px;align-items:flex-start;margin-bottom:5px;"><span style="width:8px;height:8px;border-radius:50%;background:'+r.c+';flex-shrink:0;margin-top:3px;display:inline-block;"></span><span style="font-size:11px;color:rgba(255,255,255,.8);line-height:1.5;">'+r.t+'</span></div>';}).join('');
+  var sc=d.stats.length?'repeat('+d.stats.length+',1fr)':'1fr';
+  var stats=d.stats.map(function(s){return'<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px;text-align:center;"><div style="font-size:17px;font-weight:800;color:'+s.c+';font-family:\'Montserrat\',sans-serif;">'+s.v+'</div><div style="font-size:9px;color:rgba(255,255,255,.32);font-family:\'JetBrains Mono\',monospace;text-transform:uppercase;margin-top:1px;">'+s.l+'</div></div>';}).join('');
+  document.getElementById('map-detail').innerHTML=
+    '<div style="display:flex;align-items:center;gap:9px;margin-bottom:11px;"><span style="font-size:19px;">'+d.flag+'</span><div><div style="font-family:\'Montserrat\',sans-serif;font-size:13.5px;font-weight:700;color:#fff;">'+country+'</div><div style="font-family:\'JetBrains Mono\',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:'+d.bc+';">'+d.badge+'</div></div></div>'
+    +'<div style="margin-bottom:'+(d.stats.length?'10px':'0')+';">'+rows+'</div>'
+    +(d.stats.length?'<div style="display:grid;grid-template-columns:'+sc+';gap:7px;">'+stats+'</div>':'');
+}
+
+function showTip(city, mx, my){
+  var tip=document.getElementById('maptip');
+  var colors={hq:'#FFD700',active:'#4ade80',office:'#60a5fa',done:'rgba(255,255,255,.38)'};
+  var labels={hq:'Headquarters',active:'Active Project',office:'Branch Office',done:'Completed'};
+  document.getElementById('tip-city').textContent=city.name+', '+city.country;
+  document.getElementById('tip-type').textContent=labels[city.type];
+  document.getElementById('tip-type').style.color=colors[city.type];
+  document.getElementById('tip-note').textContent=city.note;
+  var left=mx+14, top=my-30;
+  if(left+165>W) left=mx-175;
+  if(top<0) top=my+12;
+  tip.style.left=left+'px'; tip.style.top=top+'px'; tip.style.display='block';
+}
+
+function buildMap(world){
+  document.getElementById('maploader').style.display='none';
+
+  W=wrap.clientWidth||800;
+  H=Math.round(W*0.64);
+  wrap.style.height=H+'px';
+  svg.attr('width',W).attr('height',H).attr('viewBox','0 0 '+W+' '+H);
+
+  /* D3 projection — centre on Scandinavia/Europe */
+  projection=d3.geoMercator()
+    .center([14,57])
+    .scale(W*1.12)
+    .translate([W*0.5,H*0.52]);
+
+  pathGen=d3.geoPath().projection(projection);
+
+  /* Ocean background */
+  svg.append('rect').attr('width',W).attr('height',H).attr('fill','#071424');
+
+  /* Subtle grid */
+  var grid=svg.append('g').attr('opacity',0.04);
+  for(var gx=0;gx<W;gx+=40) grid.append('line').attr('x1',gx).attr('y1',0).attr('x2',gx).attr('y2',H).attr('stroke','#fff').attr('stroke-width',0.5);
+  for(var gy=0;gy<H;gy+=40) grid.append('line').attr('x1',0).attr('y1',gy).attr('x2',W).attr('y2',gy).attr('stroke','#fff').attr('stroke-width',0.5);
+
+  /* Draw countries */
+  var countries=topojson.feature(world, world.objects.countries);
+  svg.append('g').attr('id','cg')
+    .selectAll('path')
+    .data(countries.features)
+    .enter().append('path')
+      .attr('d', pathGen)
+      .attr('class', function(d){
+        var iso=getISO(d.properties);
+        return FEATURED_ISO.indexOf(iso)>=0 ? 'country-hi' : 'country';
+      })
+      .attr('fill', function(d){
+        var iso=getISO(d.properties);
+        if(FEATURED_ISO.indexOf(iso)>=0) return '#1a3565';
+        var nm=getCountryName(d.properties);
+        /* Show neighbouring European countries dimmer */
+        return '#0b1a30';
+      })
+      .attr('stroke','rgba(255,255,255,0.14)')
+      .attr('stroke-width',0.5);
+
+  /* Country borders inner line */
+  svg.append('path')
+    .datum(topojson.mesh(world, world.objects.countries, function(a,b){return a!==b;}))
+    .attr('fill','none')
+    .attr('stroke','rgba(255,255,255,0.08)')
+    .attr('stroke-width',0.4)
+    .attr('d',pathGen);
+
+  /* Add markers */
+  drawMarkers();
+  startAnim();
+}
+
+function drawMarkers(){
+  var defs=svg.append('defs');
+
+  /* HQ glow filter */
+  var fh=defs.append('filter').attr('id','fhq').attr('x','-80%').attr('y','-80%').attr('width','260%').attr('height','260%');
+  fh.append('feGaussianBlur').attr('stdDeviation',6).attr('result','b');
+  var mh=fh.append('feMerge'); mh.append('feMergeNode').attr('in','b'); mh.append('feMergeNode').attr('in','SourceGraphic');
+
+  var fa=defs.append('filter').attr('id','fact').attr('x','-60%').attr('y','-60%').attr('width','220%').attr('height','220%');
+  fa.append('feGaussianBlur').attr('stdDeviation',4).attr('result','b');
+  var ma=fa.append('feMerge'); ma.append('feMergeNode').attr('in','b'); ma.append('feMergeNode').attr('in','SourceGraphic');
+
+  CITIES.forEach(function(c){
+    var px=projection([c.lon,c.lat]);
+    if(!px) return;
+    var x=px[0], y=px[1];
+
+    var g=svg.append('g').attr('class','marker').attr('data-idx',c.i)
+      .style('cursor','pointer')
+      .on('mouseenter',function(ev){
+        var r=wrap.getBoundingClientRect();
+        showTip(c, ev.clientX-r.left, ev.clientY-r.top);
+        showDetail(c.country);
+      })
+      .on('mousemove',function(ev){
+        var r=wrap.getBoundingClientRect();
+        showTip(c, ev.clientX-r.left, ev.clientY-r.top);
+      })
+      .on('mouseleave',function(){document.getElementById('maptip').style.display='none';})
+      .on('click',function(){showDetail(c.country);});
+
+    if(c.type==='hq'){
+      /* outer glow halo */
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',28).attr('fill','rgba(255,215,0,0.05)').attr('filter','url(#fhq)');
+      /* pulse rings (animated via JS) */
+      g.append('circle').attr('class','hq-pulse1').attr('cx',x).attr('cy',y).attr('r',16).attr('fill','none').attr('stroke','rgba(255,215,0,0.5)').attr('stroke-width',1.5);
+      g.append('circle').attr('class','hq-pulse2').attr('cx',x).attr('cy',y).attr('r',14).attr('fill','none').attr('stroke','rgba(255,215,0,0.2)').attr('stroke-width',1);
+      /* main ring */
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',13).attr('fill','rgba(255,215,0,0.2)').attr('stroke','#FFD700').attr('stroke-width',2.2).attr('filter','url(#fhq)');
+      /* inner fill */
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',7).attr('fill','#FFD700').attr('filter','url(#fhq)');
+      /* core */
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',3).attr('fill','rgba(255,255,255,0.9)');
+      /* label */
+      g.append('text').attr('x',x).attr('y',y-20).attr('text-anchor','middle').attr('font-family','Montserrat,sans-serif').attr('font-size',8.5).attr('font-weight',700).attr('fill','#FFD700').text(c.name);
+
+    } else if(c.type==='active'){
+      g.append('circle').attr('class','act-pulse').attr('cx',x).attr('cy',y).attr('r',10).attr('fill','none').attr('stroke','rgba(34,197,94,0.6)').attr('stroke-width',1.5);
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',9).attr('fill','rgba(34,197,94,0.22)').attr('stroke','#22c55e').attr('stroke-width',2).attr('filter','url(#fact)');
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',5).attr('fill','#22c55e');
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',2).attr('fill','rgba(255,255,255,0.9)');
+      g.append('text').attr('x',x).attr('y',y-14).attr('text-anchor','middle').attr('font-family','Montserrat,sans-serif').attr('font-size',7.5).attr('font-weight',600).attr('fill','#86efac').text(c.name);
+
+    } else if(c.type==='office'){
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',10).attr('fill','rgba(16,52,166,0.28)').attr('stroke','#3b7dd8').attr('stroke-width',2).attr('stroke-dasharray','3 2').attr('filter','url(#fact)');
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',5.5).attr('fill','#1034A6');
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',2.2).attr('fill','rgba(255,255,255,0.85)');
+      g.append('text').attr('x',x).attr('y',y-14).attr('text-anchor','middle').attr('font-family','Montserrat,sans-serif').attr('font-size',7).attr('fill','rgba(100,165,255,0.85)').text(c.name);
+
+    } else {
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',6).attr('fill','rgba(100,116,139,0.4)').attr('stroke','rgba(255,255,255,0.38)').attr('stroke-width',1.6);
+      g.append('circle').attr('cx',x).attr('cy',y).attr('r',2.5).attr('fill','rgba(255,255,255,0.6)');
+    }
+  });
+}
+
+function startAnim(){
+  var t0=performance.now();
+  function frame(ts){
+    var t=(ts-t0)/1000;
+    /* Animate HQ pulse */
+    svg.selectAll('.hq-pulse1').attr('r',(13+9*((Math.sin(t*2.5)+1)/2)).toFixed(1)).attr('stroke','rgba(255,215,0,'+(0.7-0.5*((Math.sin(t*2.5)+1)/2)).toFixed(2)+')');
+    svg.selectAll('.hq-pulse2').attr('r',(13+5*((Math.sin(t*2.0)+1)/2)).toFixed(1));
+    /* Animate active pulse — each with phase offset */
+    svg.selectAll('.act-pulse').each(function(d,i){
+      var ph=t*2.5+i*0.8;
+      var s=(Math.sin(ph)+1)/2;
+      d3.select(this).attr('r',(9+9*s).toFixed(1)).attr('stroke','rgba(34,197,94,'+(0.65-0.55*s).toFixed(2)+')');
+    });
+    rafId=requestAnimationFrame(frame);
+  }
+  rafId=requestAnimationFrame(frame);
+}
+
+window.flyTo=function(idx){showDetail(CITIES[idx].country);};
+
+window.mapTab=function(btn,f){
+  document.querySelectorAll('.mtab').forEach(function(b){b.style.background='transparent';b.style.color='rgba(255,255,255,.4)';b.classList.remove('mtab-on');});
+  btn.style.background='rgba(255,255,255,.13)';btn.style.color='#fff';btn.classList.add('mtab-on');
+  document.querySelectorAll('.mrow').forEach(function(r){r.style.display=(f==='all'||r.dataset.t===f)?'':'none';});
+};
+
+/* Load real world TopoJSON from cdnjs-hosted world-atlas */
+function init(){
+  if(typeof d3==='undefined'||typeof topojson==='undefined'){
+    setTimeout(init,100); return;
+  }
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
+    .then(buildMap)
+    .catch(function(err){
+      console.warn('Map data load failed:',err);
+      document.getElementById('maploader').innerHTML='<div style="color:rgba(255,255,255,.3);font-family:\'JetBrains Mono\',monospace;font-size:11px;text-align:center;padding:20px;">Map requires internet connection.<br>Open index.html via a local server<br>or from a hosted URL.</div>';
+    });
+}
+
+window.addEventListener('resize',function(){
+  if(rafId) cancelAnimationFrame(rafId);
+  svg.selectAll('*').remove();
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(buildMap).catch(function(){});
+});
+
+init();
+})();
 </script>
 
 <!-- ========= ACCREDITATIONS ========= -->
